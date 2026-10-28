@@ -1,0 +1,15 @@
+node_modules
+.next
+out
+.env*
+!.env.example
+npm-debug.log*
+*.tsbuildinfo
+.DS_Store
+.audit/
+videos/
+*.log
+
+# Local agent state
+.omc/
+**/.omc/

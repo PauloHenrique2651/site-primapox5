@@ -1,0 +1,73 @@
+/* Proposta 05 — inspirada na Olgacolor: apresentação institucional completa e corporativa. */
+:root {
+  --navy-deep: #0b1650;
+  --mist: #f4f6fb;
+  --ink: #0d1530;
+  --muted: #4a536e;
+  --mist: #f3f5f9;
+  --brand-blue: #002398;
+  --line: rgba(13, 21, 48, .12);
+
+  --navy: var(--ink);
+  --blue: var(--brand-blue);
+  --red: #e00000;
+  --red-dark: #b80000;
+  --paper: var(--mist);
+  --focus: var(--brand-blue);
+
+  --display: var(--font-display), "Segoe UI", sans-serif;
+  --body: var(--font-body), "Segoe UI", Arial, sans-serif;
+  --mono: var(--font-body), "Segoe UI", Arial, sans-serif;
+
+  --header-h: 164px;
+  --shell: min(90vw, 1360px);
+}
+
+html { font-size: 106.25%; }
+body { font-family: var(--body); color: var(--ink); }
+
+body { background: #eef2ff; line-height: 1.6; }
+main { padding-top: var(--header-h); }
+:focus-visible { outline-color: var(--brand-blue); }
+::selection { background: var(--brand-blue); }
+
+.eyebrow,
+.editorial-grid__index,
+.value-grid span,
+.resin-grid span,
+.process-page__list span,
+.contact-band p,
+.solution-listing span,
+.solution-listing b,
+.application-index article > div:last-child > span,
+.gallery-filters button,
+.contact-page__details > div span,
+.quote-form label > span:first-child,
+.industrial-gallery__item > span,
+.gallery-lightbox__caption span { font-family: var(--body); font-size: .95rem; font-weight: 700; letter-spacing: 0; text-transform: none; }
+
+.editorial-grid__lead h2, .value-grid h3, .resin-grid h3, .process-page__list h2, .application-index h2,
+.contact-band h2, .solution-listing h2, .legal-copy h2, .process-principle p { font-weight: 900; letter-spacing: -.02em; line-height: 1.04; text-transform: none; }
+.editorial-grid__lead h2, .process-page__list h2, .application-index h2, .resin-grid h3 { color: var(--brand-blue); }
+.editorial-grid__copy, .value-grid p, .resin-grid p, .process-page__list p, .application-index p, .legal-copy p, .contact-page__details > p { font-size: 1.08rem; }
+
+.content-section { background: var(--mist); }
+.value-section { background: var(--navy-deep); }
+.value-grid article { color: #fff; border-color: rgba(255,255,255,.2); }
+.value-grid h3 { color: #fff; }
+.value-grid p, .value-grid span { color: #d6ddf7; }
+.resin-section { background: #fff; }
+.contact-band { background: var(--navy-deep); }
+.process-principle { background: var(--red); }
+
+.button { border-radius: 6px !important; font-family: var(--display); font-size: 1rem; font-weight: 800; letter-spacing: 0; text-transform: none; }
+.text-link { font-family: var(--display); font-size: 1rem; font-weight: 800; letter-spacing: 0; text-transform: none; border-bottom: 3px solid var(--red); }
+.text-link--light { border-bottom-color: currentColor; }
+.quote-form { border-top: 0; padding-top: 0; }
+.quote-form input, .quote-form select, .quote-form textarea { font-size: 1.05rem; }
+.quote-form__submit p { font-size: .92rem; }
+.industrial-gallery__item { border-radius: 12px; }
+.gallery-filters button { border-radius: 6px; }
+
+@media (max-width: 1180px) { :root { --header-h: 136px; } }
+@media (max-width: 640px) { :root { --header-h: 126px; } }

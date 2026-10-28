@@ -1,0 +1,121 @@
+.form :global(.file-field input:focus-visible + .file-field__visual) {
+  outline: 3px solid var(--red);
+  outline-offset: 4px;
+}
+
+.dragging :global(.file-field__visual) {
+  border-color: var(--blue);
+  background: #edf4f9;
+}
+
+.attachments {
+  margin: -.3rem 0 1.5rem;
+}
+
+.caption {
+  color: var(--navy);
+  font: 600 .65rem/1.5 var(--mono);
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+
+.attachments ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.attachments li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: .75rem;
+  padding: .8rem 0;
+  border-bottom: 1px solid var(--line);
+  font-size: .84rem;
+}
+
+.attachments li > span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.attachments small {
+  display: block;
+  margin-top: .2rem;
+  color: #5f7080;
+  font: 400 .66rem/1.5 var(--mono);
+}
+
+.attachments button {
+  min-height: 44px;
+  padding: .5rem .7rem;
+  color: var(--navy);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: transparent;
+  font: 600 .7rem/1.3 var(--body);
+  cursor: pointer;
+}
+
+.help,
+.notice {
+  margin: 1rem 0;
+  color: #536777;
+  font-size: .8rem;
+  line-height: 1.6;
+}
+
+.notice {
+  padding-left: 1rem;
+  border-left: 3px solid var(--blue);
+}
+
+.handoff {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #f3f6f8;
+}
+
+.handoff h2 {
+  margin: 0 0 .75rem;
+  color: var(--navy);
+  font: 800 var(--type-card)/1.2 var(--display);
+  text-transform: uppercase;
+}
+
+.handoff p {
+  margin: 0 0 .75rem;
+  color: #536777;
+  font-size: .86rem;
+  line-height: 1.6;
+}
+
+.handoff :global(.text-link) {
+  min-width: 0;
+  max-width: 100%;
+  gap: .8rem;
+  line-height: 1.5;
+}
+
+.form button:disabled {
+  opacity: .65;
+  cursor: wait;
+}
+
+@media (max-width: 520px) {
+  .form :global(.quote-form__submit) {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .form :global(.quote-form__submit .button) {
+    width: 100%;
+    padding-inline: 1.1rem;
+    font-size: .72rem;
+    line-height: 1.4;
+  }
+}

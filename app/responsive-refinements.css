@@ -1,0 +1,78 @@
+/* Compact editorial proportions at native browser zoom. Keep body text and hit targets readable. */
+:root {
+  --shell: min(86vw, 1320px);
+  --type-home-hero: clamp(1.875rem, 2.55vw, 2.375rem);
+  --type-hero: clamp(2.125rem, 3.75vw, 3.35rem);
+  --type-section: clamp(1.7rem, 2.35vw, 2.55rem);
+  --type-card: clamp(1.2rem, 1.55vw, 1.5rem);
+  --type-stat: clamp(1.875rem, 2.35vw, 2.625rem);
+}
+
+.hero h1 { max-width: 740px; }
+.desktop-nav { gap: clamp(1rem, 1.65vw, 1.75rem); }
+.hero__content { max-width: 920px; padding-block: 0; }
+.hero__copy { max-width: 620px; margin-top: 1.65rem; }
+.hero__actions { margin-top: 2rem; }
+.hero__eyebrow { margin-bottom: 1.65rem; }
+.section, .content-section { padding-block: clamp(3.25rem, 5.25vw, 5.5rem); }
+.section-heading {
+  grid-template-columns: minmax(135px, .65fr) minmax(0, 1.8fr) minmax(230px, 1fr);
+  gap: clamp(1.25rem, 2.35vw, 2rem);
+  margin-bottom: clamp(2rem, 3.2vw, 3rem);
+}
+.section-heading h2, .page-hero h1, .quote-section__intro h2 { text-wrap: balance; }
+.section-heading__aside { font-size: .95rem; }
+.benefit-list { padding: clamp(1.5rem, 3vw, 3rem); }
+.process-rail article { min-height: 300px; }
+.application-mosaic { grid-template-rows: repeat(2, minmax(330px, 1fr)); }
+.page-hero__grid { gap: clamp(2rem, 5vw, 5rem); }
+.page-hero { min-height: 56svh; }
+.page-hero__grid { min-height: calc(56svh - 78px); }
+.quote-section > .shell { gap: clamp(2.5rem, 5vw, 5.5rem); }
+
+@media (max-width: 1100px) {
+  :root { --shell: min(90vw, 1000px); }
+  .section-heading {
+    grid-template-columns: 130px minmax(0, 1fr);
+    gap: 1.5rem 2rem;
+  }
+  .section-heading__aside { grid-column: 2; max-width: 620px; }
+}
+
+@media (max-width: 800px) {
+  :root {
+    --shell: min(90vw, 700px);
+    --type-home-hero: clamp(1.625rem, 3.9vw, 2rem);
+    --type-hero: clamp(1.875rem, 4.9vw, 2.625rem);
+    --type-section: clamp(1.55rem, 3.9vw, 2rem);
+    --type-card: clamp(1.15rem, 2.5vw, 1.375rem);
+  }
+  .section-heading { grid-template-columns: minmax(0, 1fr); gap: 1.35rem; }
+  .section-heading__aside { grid-column: auto; }
+  .hero__grid { padding-top: 108px; padding-bottom: 108px; }
+  .hero__copy { max-width: 100%; }
+  .hero__actions { gap: .75rem; }
+  .process-rail article { min-height: 0; padding-bottom: 2.5rem; }
+  .application-mosaic { grid-template-rows: none; }
+  .page-hero { min-height: auto; }
+  .page-hero__grid { min-height: 390px; padding-bottom: 2.75rem; }
+  .quote-section > .shell { gap: 2.25rem; }
+}
+
+@media (max-width: 520px) {
+  :root {
+    --shell: min(90vw, 480px);
+    --type-home-hero: clamp(1.375rem, 6.2vw, 1.625rem);
+    --type-hero: clamp(1.75rem, 7.7vw, 2.125rem);
+    --type-section: clamp(1.5rem, 6.2vw, 1.7rem);
+    --type-card: 1.15rem;
+  }
+  .hero__grid { padding-top: 100px; padding-bottom: 96px; }
+  .hero__eyebrow { margin-bottom: 1.25rem; }
+  .hero__copy { margin-top: 1.25rem; }
+  .hero__actions { margin-top: 1.5rem; }
+  .hero__actions .button { min-height: 48px; }
+  .section, .content-section { padding-block: 3rem; }
+  .section-heading { margin-bottom: 2rem; }
+  .page-hero__grid { min-height: 365px; gap: 1.5rem; }
+}

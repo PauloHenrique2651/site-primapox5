@@ -1,0 +1,14 @@
+.visual {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.visual.visual::before,
+.visual.visual::after {
+  content: none;
+}
+
+.image {
+  object-fit: cover;
+}

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      /* Primapox hero loop — olgacolor. Background only: the website overlays its own headline. */
+      :root { --ground: #0d1530; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: var(--ground); }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: var(--ground); }
+      .shot { position: absolute; inset: 0; overflow: hidden; }
+      .frame { position: absolute; inset: 0; overflow: hidden; }
+      .frame img { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; object-fit: cover; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="12" data-width="1920" data-height="1080" data-layout-allow-overflow>
+      <div id="olgacolor-shot-0" class="clip shot" data-start="0" data-duration="12" data-track-index="0" style="z-index:1">
+        <div class="frame" id="olgacolor-shot-0-frame"><img id="olgacolor-shot-0-img" src="assets/photo-poster.jpg" alt="" /></div>
+      </div>
+      <div id="olgacolor-shot-1" class="clip shot" data-start="1.8" data-duration="10.2" data-track-index="1" style="z-index:2">
+        <div class="frame" id="olgacolor-shot-1-frame"><img id="olgacolor-shot-1-img" src="assets/photo-31.jpg" alt="" /></div>
+      </div>
+      <div id="olgacolor-shot-2" class="clip shot" data-start="4.2" data-duration="7.8" data-track-index="2" style="z-index:3">
+        <div class="frame" id="olgacolor-shot-2-frame"><img id="olgacolor-shot-2-img" src="assets/photo-45.jpg" alt="" /></div>
+      </div>
+      <div id="olgacolor-shot-3" class="clip shot" data-start="6.6" data-duration="5.4" data-track-index="3" style="z-index:4">
+        <div class="frame" id="olgacolor-shot-3-frame"><img id="olgacolor-shot-3-img" src="assets/photo-27.jpg" alt="" /></div>
+      </div>
+      <div id="olgacolor-shot-4" class="clip shot" data-start="9" data-duration="3" data-track-index="4" style="z-index:5">
+        <div class="frame" id="olgacolor-shot-4-frame"><img id="olgacolor-shot-4-img" src="assets/photo-11.jpg" alt="" /></div>
+      </div>
+      <div id="olgacolor-shot-5" class="clip shot" data-start="11.4" data-duration="0.6" data-track-index="5" style="z-index:6">
+        <div class="frame" id="olgacolor-shot-5-frame"><img id="olgacolor-shot-5-img" src="assets/photo-poster.jpg" alt="" /></div>
+      </div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#olgacolor-shot-0-img", { scale: 1.08, xPercent: 0, yPercent: 0 }, { scale: 1.18, xPercent: -2, yPercent: 0, duration: 3.6, ease: "power1.inOut" }, 0);
+      tl.fromTo("#olgacolor-shot-1-img", { scale: 1.08, xPercent: 0, yPercent: 0 }, { scale: 1.18, xPercent: 2, yPercent: 0, duration: 3.6, ease: "power1.inOut" }, 1.8);
+      tl.fromTo("#olgacolor-shot-1-frame", { xPercent: 100 }, { xPercent: 0, duration: 0.6, ease: "power3.inOut" }, 1.8);
+      tl.fromTo("#olgacolor-shot-2-img", { scale: 1.08, xPercent: 0, yPercent: 0 }, { scale: 1.18, xPercent: -2, yPercent: 1, duration: 3.6, ease: "power1.inOut" }, 4.2);
+      tl.fromTo("#olgacolor-shot-2-frame", { xPercent: 100 }, { xPercent: 0, duration: 0.6, ease: "power3.inOut" }, 4.2);
+      tl.fromTo("#olgacolor-shot-3-img", { scale: 1.08, xPercent: 0, yPercent: 0 }, { scale: 1.18, xPercent: 2, yPercent: 0, duration: 3.6, ease: "power1.inOut" }, 6.6);
+      tl.fromTo("#olgacolor-shot-3-frame", { xPercent: 100 }, { xPercent: 0, duration: 0.6, ease: "power3.inOut" }, 6.6);
+      tl.fromTo("#olgacolor-shot-4-img", { scale: 1.08, xPercent: 0, yPercent: 0 }, { scale: 1.18, xPercent: -2, yPercent: 0, duration: 3, ease: "power1.inOut" }, 9);
+      tl.fromTo("#olgacolor-shot-4-frame", { xPercent: 100 }, { xPercent: 0, duration: 0.6, ease: "power3.inOut" }, 9);
+      tl.fromTo("#olgacolor-shot-5-img", { scale: 1.08, xPercent: 0, yPercent: 0 }, { scale: 1.08, xPercent: 0, yPercent: 0, duration: 0.6, ease: "none" }, 11.4);
+      tl.fromTo("#olgacolor-shot-5-frame", { xPercent: 100 }, { xPercent: 0, duration: 0.6, ease: "power3.inOut" }, 11.4);
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

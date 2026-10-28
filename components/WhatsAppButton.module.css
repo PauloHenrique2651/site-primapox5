@@ -1,0 +1,82 @@
+.button {
+  position: fixed;
+  z-index: 45;
+  right: max(24px, env(safe-area-inset-right));
+  bottom: max(24px, env(safe-area-inset-bottom));
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  color: #fff;
+  background: #0dbd43;
+  border: 2px solid rgba(255, 255, 255, .85);
+  border-radius: 50%;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, .24);
+  transition: transform 180ms ease, background-color 180ms ease;
+}
+
+.button:hover {
+  background: #0a9d38;
+  transform: translateY(-3px);
+}
+
+.button:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 4px;
+  box-shadow: 0 0 0 7px var(--navy), 0 6px 22px rgba(0, 0, 0, .24);
+}
+
+.tooltip {
+  position: absolute;
+  right: calc(100% + 12px);
+  padding: .7rem .9rem;
+  color: #fff;
+  background: var(--navy);
+  border: 1px solid rgba(255, 255, 255, .18);
+  border-radius: 8px;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  font: 600 .8rem/1.3 var(--body);
+  transform: translateX(5px);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.button:hover .tooltip,
+.button:focus-visible .tooltip {
+  opacity: 1;
+  transform: none;
+}
+
+:global(body[data-menu-open="true"]) .button,
+:global(body:has(.mobile-navigation[open])) .button {
+  visibility: hidden;
+}
+
+@media (max-width: 800px) {
+  .button {
+    right: max(16px, env(safe-area-inset-right));
+    bottom: max(16px, env(safe-area-inset-bottom));
+    width: 54px;
+    height: 54px;
+  }
+
+  .tooltip {
+    display: none;
+  }
+
+  :global(body:has(.quote-form input:focus, .quote-form textarea:focus, .quote-form select:focus)) .button {
+    visibility: hidden;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button,
+  .tooltip {
+    transition: none;
+  }
+
+  .button:hover {
+    transform: none;
+  }
+}

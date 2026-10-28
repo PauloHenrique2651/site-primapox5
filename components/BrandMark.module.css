@@ -1,0 +1,19 @@
+.brand {
+  display: inline-flex;
+  flex-shrink: 0;
+  width: var(--logo-width, 240px);
+  max-width: 100%;
+  transition: width 240ms ease;
+}
+
+.logo {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.brand:focus-visible {
+  outline: 3px solid var(--focus, #002398);
+  outline-offset: 6px;
+  border-radius: 8px;
+}
