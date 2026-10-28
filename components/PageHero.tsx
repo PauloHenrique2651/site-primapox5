@@ -12,7 +12,7 @@ export function PageHero({ eyebrow, title, copy, image }: { eyebrow: string; tit
           <Link href="/">Início</Link> <span aria-hidden="true">›</span> <span aria-current="page">{eyebrow.replace("Primapox / ", "")}</span>
         </nav>
         <h1>{title}</h1>
-        <p>{copy}</p>
+        {copy && <p>{copy}</p>}
       </div>
     </section>
   );

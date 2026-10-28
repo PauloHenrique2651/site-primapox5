@@ -1,74 +1,73 @@
-import { SectionHeading } from "./SectionHeading";
-import { cleaningFactors, cleaningIntervals, coatingCare, environmentalFactors } from "@/data/maintenance";
-import { mailtoLink } from "@/data/contact";
+import Image from "next/image";
 import styles from "./MaintenanceSection.module.css";
+
+// Text reproduced exactly as published on the legacy site (www.primapox.com/manutencao.php),
+// including its original spelling, at the client's request.
+const factors = [
+  "Localização geográfica do edifício;",
+  "Meio ambiente (Marítimo, Industrial, etc...);",
+  "Nível de poluição do ar;",
+  "Ventos predominantes;",
+  "Proteção da construção;",
+  "Resistência a atritos do ar que causam erosão na camada pintada (Areia, etc...).",
+];
+
+const intervals = [
+  ["Zona Marítima", "Mensal"],
+  ["Zona Industrial", "Trimestral"],
+  ["Zona não poluída de baixo risco ambiental", "A cada 18 meses"],
+];
+
+const requirements = [
+  "Camada de tinta de 50 a 70 microns;",
+  "Reparos imediatos em locais danificados;",
+  "Cobertura e selagem de cortes e junções de esquadrias;",
+  "Limpeza freqüente.",
+];
 
 export function MaintenanceSection() {
   return (
-    <section className={`section ${styles.section}`} id="manutencao" aria-label="Manutenção da pintura poliéster">
-      <div className="shell">
-        <SectionHeading
-          eyebrow="Manutenção da pintura"
-          title={<>Como manter<br />a pintura poliéster.</>}
-          aside={<p>Orientações de limpeza, intervalos de manutenção e cuidados com o acabamento da sua peça.</p>}
-        />
-
-        <div className={styles.overview}>
-          <div className={styles.cleaning}>
-            <p className={styles.label}>Limpeza da pintura poliéster</p>
-            <h3>Detergente neutro.<br />Contato suave.</h3>
-            <p>Use uma solução de detergente neutro em água quente, com uma flanela ou esponja macia. Nunca utilize materiais ásperos no auxílio da limpeza.</p>
-            <div className={styles.warning}>
-              <strong>O que evitar</strong>
-              <p>Manchas causadas pela poluição do ar não devem ser removidas com materiais abrasivos ou produtos que contenham acetona, éter ou álcool.</p>
-            </div>
-          </div>
-
-          <div className={styles.schedule}>
-            <p className={styles.label}>Intervalos recomendados</p>
-            <h3>Cada ambiente pede uma rotina.</h3>
-            <table>
-              <caption className={styles.srOnly}>Frequência de limpeza recomendada para a pintura poliéster</caption>
-              <thead><tr><th scope="col">Ambiente</th><th scope="col">Limpeza</th></tr></thead>
-              <tbody>{cleaningIntervals.map(({ environment, interval }) => (
-                <tr key={environment}><th scope="row">{environment}</th><td>{interval}</td></tr>
-              ))}</tbody>
-            </table>
-          </div>
+    <section className={styles.section}>
+      <div className={`shell ${styles.layout}`}>
+        <div className={styles.text}>
+          <p>A pintura Poliéster deve ser limpa regularmente para manter suas propriedades decorativas. A freqüência de limpeza depende dos seguintes fatores:</p>
+          <ul className={styles.list}>{factors.map((item) => <li key={item}>{item}</li>)}</ul>
+          <p>Manchas na camada de pintura, resultante da poluição do ar, não devem ser removidas com material abrasivos ou produtos contendo acetonas, éter ou álcool.</p>
+          <p>A limpeza de pintura Poliéster deve ser feita com uma solução de detergente neutro em água quente , usando uma flanela ou uma esponja macia. Nunca se deve usar material áspero no auxílio da limpeza.</p>
         </div>
+        <figure className={styles.photo}>
+          <Image src="/gallery/36.webp" alt="Cobertura metálica em acesso de edifício" fill sizes="(max-width: 900px) 92vw, 34vw" />
+        </figure>
+      </div>
 
-        <div className={styles.details}>
-          <details>
-            <summary>O que define a frequência de limpeza?<span aria-hidden="true" /></summary>
-            <div className={styles.answer}><p>A rotina deve considerar os seguintes fatores:</p><ul>{cleaningFactors.map((factor) => <li key={factor}>{factor}</li>)}</ul></div>
-          </details>
-          <details>
-            <summary>Fatores ambientais que afetam a pintura<span aria-hidden="true" /></summary>
-            <div className={styles.answer}><dl>{environmentalFactors.map(({ title, description }) => <div key={title}><dt>{title}</dt><dd>{description}</dd></div>)}</dl></div>
-          </details>
-          <details>
-            <summary>Cuidados e requisitos para garantia<span aria-hidden="true" /></summary>
-            <div className={styles.answer}>
-              <ul>{coatingCare.map((care) => <li key={care}>{care}</li>)}</ul>
-              <p className={styles.note}>Confirme com a Primapox as condições de garantia aplicáveis ao seu projeto.</p>
-            </div>
-          </details>
-          <details>
-            <summary>Retoque da pintura<span aria-hidden="true" /></summary>
-            <div className={styles.answer}>
-              <p>O retoque deve ser feito com tinta líquida de boa solidez à luz, como a alquídica. O material de referência cita Cromadex 259 como exemplo.</p>
-              <p>O local a ser retocado deve ser previamente lixado com lixa d’água de grão 400. Confirme a especificação do retoque com a equipe técnica.</p>
-            </div>
-          </details>
-          <details>
-            <summary>Silicone industrial<span aria-hidden="true" /></summary>
-            <div className={styles.answer}><p>A aderência do silicone estrutural sobre o material pintado é de responsabilidade do fabricante do silicone.</p></div>
-          </details>
-        </div>
+      <div className={`shell ${styles.block}`}>
+        <h3>Intervalo da limpeza</h3>
+        <p>Para se manter as propriedades decorativas da pintura Poliéster é necessário seguir os intervalos de limpeza recomendados abaixo:</p>
+        <dl className={styles.intervals}>
+          {intervals.map(([zone, interval]) => <div key={zone}><dt>{zone}</dt><dd>{interval}</dd></div>)}
+        </dl>
+      </div>
 
-        <div className={styles.support}>
-          <p>Tem dúvidas sobre a manutenção da sua peça?</p>
-          <a className="text-link" href={mailtoLink("Manutenção da pintura — Primapox")}>Falar com a Primapox <span className="icon icon--north-east" aria-hidden="true" /></a>
+      <div className={`shell ${styles.block}`}>
+        <h3>Fatores ambientais que afetam a pintura Poliéster</h3>
+        <dl className={styles.factors}>
+          <div><dt>Luz Ultravioleta</dt><dd>A radiação da Luz Ultravioleta é maior em zonas marítimas que em zonas industriais ou rurais, devido a umidade do ar. Nas zonas costeiras, a degradação do filme de Poliéster é proporcionado ao descoloramento da cor.</dd></div>
+          <div><dt>Atmosfera Salina</dt><dd>O sal do mar é muito corrosivo e afeta sobremaneira os substratos ferrosos e não ferrosos.</dd></div>
+          <div><dt>Erosão</dt><dd>A combinação de ventos e detritos do litoral produz uma força de erosão que afeta a camada de Poliéster, causando danos a pintura.</dd></div>
+        </dl>
+        <p className={styles.lead}>Os requisitos necessários para garantia da pintura Poliéster são os seguintes:</p>
+        <ul className={styles.list}>{requirements.map((item) => <li key={item}>{item}</li>)}</ul>
+      </div>
+
+      <div className={`shell ${styles.closing}`}>
+        <figure className={styles.photoSmall}>
+          <Image src="/gallery/40.webp" alt="Divisória metálica com acabamento escuro em escritório" fill sizes="(max-width: 900px) 92vw, 30vw" />
+        </figure>
+        <div>
+          <h3>Retoque</h3>
+          <p>O retoque deverá ser feito com uma tinta líquida de boa solidez à luz como a alquídica (EX.: Cromadex 259). O local a ser retocado deve ser previamente lixado com lixa d´água grão 400.</p>
+          <h3>Silicone industrial</h3>
+          <p>A aderência do silicone estrutural sobre o material pintado é de responsabilidade do fabricante do silicone.</p>
         </div>
       </div>
     </section>
