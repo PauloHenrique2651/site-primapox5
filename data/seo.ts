@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 // Set to the public deployment URL until the main domain is migrated.
-const configuredUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://siteprimapox.vercel.app";
+const configuredUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://site-primapox5.vercel.app";
 export const siteUrl = new URL(configuredUrl).origin;
 export const siteRoutes = ["/", "/empresa", "/solucoes", "/solucoes/pintura-eletrostatica-a-po", "/processo", "/aplicacoes", "/galeria", "/manutencao", "/central-tecnica", "/contato", "/politica-de-privacidade"] as const;
 
