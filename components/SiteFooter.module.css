@@ -61,3 +61,4 @@
   .columns { grid-template-columns: 1fr; }
   .bottom { flex-direction: column; }
 }
+@media (min-width: 1001px) { .columns { grid-template-columns: 1fr 1.2fr 1.2fr; } }

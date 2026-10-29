@@ -16,7 +16,7 @@ export function StructuredData() {
         ...(socialProfiles.length ? { sameAs: socialProfiles.map((profile) => profile.url) } : {}),
       },
       { "@type":"WebSite", "@id":`${siteUrl}/#website`,url:siteUrl,name:company.shortName,inLanguage:"pt-BR",publisher:{"@id":`${siteUrl}/#organization`} },
-      { "@type":"Service",name:"Pintura eletrostática a pó",url:`${siteUrl}/solucoes/pintura-eletrostatica-a-po`,serviceType:"Pintura eletrostática a pó de componentes metálicos",provider:{"@id":`${siteUrl}/#organization`} },
+      { "@type":"Service",name:"Pintura eletrostática a pó",url:`${siteUrl}/servicos`,serviceType:"Pintura eletrostática a pó de componentes metálicos",provider:{"@id":`${siteUrl}/#organization`} },
     ],
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(data).replace(/</g,"\\u003c")}} />;

@@ -13,10 +13,15 @@ const nextConfig: NextConfig = {
     return [
       { source:"/index.php",destination:"/",permanent:true },
       { source:"/empresa.php",destination:"/empresa",permanent:true },
-      { source:"/servicos.php",destination:"/solucoes/pintura-eletrostatica-a-po",permanent:true },
+      { source:"/servicos.php",destination:"/servicos",permanent:true },
       { source:"/manutencao.php",destination:"/manutencao",permanent:true },
       { source:"/galeria.php",destination:"/galeria",permanent:true },
       { source:"/contato.php",destination:"/contato",permanent:true },
+      { source:"/solucoes",destination:"/servicos",permanent:true },
+      { source:"/solucoes/:path*",destination:"/servicos",permanent:true },
+      { source:"/processo",destination:"/servicos",permanent:true },
+      { source:"/aplicacoes",destination:"/servicos",permanent:true },
+      { source:"/central-tecnica",destination:"/servicos",permanent:true },
     ];
   },
   async headers() {

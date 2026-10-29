@@ -1,14 +1,16 @@
 import { pageMetadata } from "@/data/seo";
-import { IndustrialGallery } from "@/components/IndustrialGallery";
 import { PageHero } from "@/components/PageHero";
+import { PhotoGallery } from "@/components/PhotoGallery";
+import { galleryTitle } from "@/data/primapox";
+import styles from "@/components/LegacyContent.module.css";
 
-export const metadata = pageMetadata("/galeria", "Galeria", "Galeria de aplicações e acabamentos da Primapox.");
+export const metadata = pageMetadata("/galeria", "Galeria de Fotos", "Galeria de fotos da Primapox: pintura eletrostática com tinta em pó.");
 
 export default function GaleriaPage() {
   return (
     <>
-      <PageHero image="/gallery/14.webp" eyebrow="Primapox / Galeria" marker="46 IMAGENS" title={<>Cor, processo<br /><em>e metal em campo.</em></>} copy="Acervo histórico real da Primapox: linha produtiva, acabamentos, componentes e aplicações arquitetônicas." />
-      <section className="gallery-page"><div className="shell"><IndustrialGallery /></div></section>
+      <PageHero image="/gallery/14.webp" eyebrow="Primapox / Galeria de Fotos" marker="" title={galleryTitle} copy="" />
+      <section className={styles.section}><div className="shell"><PhotoGallery /></div></section>
     </>
   );
 }

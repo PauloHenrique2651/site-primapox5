@@ -15,13 +15,7 @@ export const company = {
   mapsEmbedUrl: "https://www.google.com/maps?q=-22.8185494,-43.3150827&z=16&output=embed",
 };
 
-export const navigation = [
-  { label: "Serviços", href: "/solucoes/pintura-eletrostatica-a-po" },
-  { label: "Processo", href: "/processo" },
-  { label: "Aplicações", href: "/aplicacoes" },
-  { label: "Empresa", href: "/empresa" },
-  { label: "Manutenção", href: "/manutencao" },
-];
+export { tabs as navigation } from "./primapox";
 
 export const processSteps = [
   {
