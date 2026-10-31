@@ -168,7 +168,7 @@
 .header { color: #fff; background: rgba(25, 38, 54, .97); box-shadow: none; }
 .header[data-scrolled="true"] { box-shadow: 0 8px 26px rgba(0, 0, 0, .3); }
 .utility { background: transparent; border-bottom: 1px solid rgba(255,255,255,.08); font-size: .8rem; }
-.brand { padding: 6px 10px; background: #fff; border-radius: 6px; box-sizing: content-box; }
+.brand { padding: 0; background: none; border: 0; box-shadow: none; }
 .nav > a, .group > button { color: #fff; font: 500 .9rem/1 var(--font-inter); }
 .nav > a::after { background: #fff; height: 2px; bottom: 8px; }
 .nav > a:hover, .group > button:hover, .group > button[aria-expanded="true"] { color: #fff; background: rgba(255,255,255,.08); }

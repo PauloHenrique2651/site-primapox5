@@ -1,5 +1,6 @@
 /* Proposta 05 — inspirada na Olgacolor: apresentação institucional completa e corporativa. */
 :root {
+  --footer-bg: #192636; --form-bg: #f4f6fb; --form-button: #192636; --form-radius: 25px;
   --font-display: var(--font-inter);
   --font-body: var(--font-inter);
   --slate: #192636;

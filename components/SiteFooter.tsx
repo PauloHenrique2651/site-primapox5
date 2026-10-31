@@ -1,39 +1,18 @@
-import Link from "next/link";
 import { BrandMark } from "@/components/BrandMark";
-import { SocialLinks } from "@/components/SocialLinks";
-import { company, navigation } from "@/data/site";
-import { contact, footerRights, home } from "@/data/primapox";
+import { footerLines, footerRights } from "@/data/primapox";
 import styles from "./SiteFooter.module.css";
 
+// Footer text exactly as the legacy primapox.com footer (rdp.gif). The logo sits directly on the
+// background: only the cloud itself is white.
 export function SiteFooter() {
   return (
     <footer className={styles.footer} id="rodape">
-      <div className={styles.band}>
-        <div className={`shell ${styles.bandInner}`}>
-          <BrandMark className={styles.brand} sizes="(max-width: 800px) 220px, 280px" />
-          <p>{footerRights}</p>
-          <Link className={styles.bandCta} href="/contato">{home.contactTitle}</Link>
+      <div className={`shell ${styles.inner}`}>
+        <BrandMark className={styles.brand} sizes="(max-width: 800px) 180px, 220px" />
+        <div className={styles.text}>
+          <p className={styles.rights}>{footerRights}</p>
+          {footerLines.map((line) => <p key={line}>{line}</p>)}
         </div>
-      </div>
-      <div className={`shell ${styles.columns}`}>
-        <nav aria-label="Navegação do rodapé">
-          {navigation.map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}
-        </nav>
-        <div>
-          <h2>{home.contactTitle}</h2>
-          <a className={styles.mail} href={`mailto:${contact.email}`}>{contact.email}</a>
-          {contact.phoneLines.map((line) => <p key={line}>{line}</p>)}
-          <SocialLinks className={styles.social} />
-        </div>
-        <div>
-          <h2>{home.locationTitle}</h2>
-          {contact.addressLines.map((line) => <p key={line}>{line}</p>)}
-          <a href={company.mapsUrl} target="_blank" rel="noopener noreferrer">{home.more}</a>
-        </div>
-      </div>
-      <div className={`shell ${styles.bottom}`}>
-        <span>{footerRights}</span>
-        <Link href="/politica-de-privacidade">Política de privacidade</Link>
       </div>
     </footer>
   );

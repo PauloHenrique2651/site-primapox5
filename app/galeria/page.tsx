@@ -4,7 +4,7 @@ import { PhotoGallery } from "@/components/PhotoGallery";
 import { galleryTitle } from "@/data/primapox";
 import styles from "@/components/LegacyContent.module.css";
 
-export const metadata = pageMetadata("/galeria", "Galeria de Fotos", "Galeria de fotos da Primapox: pintura eletrostática com tinta em pó.");
+export const metadata = pageMetadata("/galeria", "Galeria de Fotos", "Galeria de Fotos");
 
 export default function GaleriaPage() {
   return (

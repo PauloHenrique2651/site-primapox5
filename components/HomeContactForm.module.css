@@ -1,0 +1,21 @@
+/* Field grid mirrors the legacy home form: Nome | empresa, DDD + Telefone | e-mail, observações, OK. */
+.form { display: grid; grid-template-columns: repeat(12, 1fr); gap: .8rem; }
+.form input, .form textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: .75rem .9rem;
+  color: var(--form-ink, #28303d);
+  border: 1px solid var(--form-line, rgba(0, 0, 0, .15));
+  border-radius: var(--form-radius, 3px);
+  background: var(--form-bg, #f4f4f4);
+  font: 400 1rem/1.4 var(--body);
+}
+.form input::placeholder, .form textarea::placeholder { color: var(--form-placeholder, #6b6b6b); }
+.form input:focus, .form textarea:focus { outline: 2px solid var(--brand-blue, #002398); outline-offset: 1px; }
+.half { grid-column: span 6; }
+.ddd { grid-column: span 2; }
+.phone { grid-column: span 4; }
+.full { grid-column: 1 / -1; min-height: 120px !important; resize: vertical; }
+.send { grid-column: 12 / 13; justify-self: end; min-width: 72px; min-height: 46px; padding: 0 1.2rem; color: #fff; border: 0; border-radius: var(--form-radius, 3px); background: var(--form-button, #000); font: 600 1rem/1 var(--body); cursor: pointer; }
+.send:hover { filter: brightness(1.2); }
+@media (max-width: 640px) { .half, .full { grid-column: 1 / -1; } .ddd { grid-column: span 4; } .phone { grid-column: span 8; } .send { grid-column: 1 / -1; justify-self: stretch; } }

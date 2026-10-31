@@ -9,7 +9,6 @@ export function AboutContent() {
     <section className={styles.section}>
       <div className={`shell ${styles.split}`}>
         <div>
-          <h2 className={styles.h2}>{about.title}</h2>
           {about.paragraphs.map((paragraph) => <p key={paragraph} className={paragraph.startsWith("CONSULTE") ? styles.strong : undefined}>{paragraph}</p>)}
         </div>
         <figure className={styles.photo}><Image src="/gallery/25.webp" alt="Fachada envidraçada com estrutura metálica" fill sizes="(max-width: 900px) 92vw, 38vw" /></figure>
@@ -103,8 +102,8 @@ export function ServicesContent() {
               {services.after.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
             </div>
             <div className={styles.stepPhotos}>
-              <figure className={styles.photo}><Image src="/legacy/antes.webp" alt="Linha de pintura com perfis antes da cura" fill sizes="(max-width: 900px) 92vw, 30vw" /><figcaption>{services.beforeTitle}</figcaption></figure>
-              <figure className={styles.photo}><Image src="/legacy/depois.webp" alt="Telha metálica com acabamento laranja depois da cura" fill sizes="(max-width: 900px) 92vw, 30vw" /><figcaption>{services.afterTitle}</figcaption></figure>
+              <figure className={styles.photo}><Image src="/legacy/antes.webp" alt="Linha de pintura com perfis antes da cura" fill sizes="(max-width: 900px) 92vw, 30vw" /></figure>
+              <figure className={styles.photo}><Image src="/legacy/depois.webp" alt="Telha metálica com acabamento laranja depois da cura" fill sizes="(max-width: 900px) 92vw, 30vw" /></figure>
             </div>
           </div>
         </div>
@@ -118,7 +117,6 @@ export function ContactContent() {
     <section className={styles.section}>
       <div className={`shell ${styles.contactGrid}`}>
         <div>
-          <h2 className={styles.h2}>{contact.title}</h2>
           <p>{contact.intro}</p>
           <div className={styles.contactCard}>
             <strong>{contact.company}</strong>

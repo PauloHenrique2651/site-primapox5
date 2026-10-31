@@ -15,10 +15,10 @@ const inter = Inter({ subsets: ["latin"], weight: ["300", "400", "500", "600", "
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Primapox | Pintura eletrostática a pó no Rio de Janeiro",
+    default: "Primapox",
     template: "%s | Primapox",
   },
-  description: "Pintura eletrostática a pó para componentes metálicos, com preparação controlada, cobertura uniforme e acabamento de alto padrão no Rio de Janeiro.",
+  description: "Executamos pintura eletrostática com tinta em pó, ideais para: esquadrias, batentes, caixilhos, forros, divisórias, fachadas, telhas metálicas, coberturas, estruturas espaciais, etc.",
   icons: {
     icon: [{ url: "/icons/primapox-32.png", type: "image/png", sizes:"32x32" }, {url:"/icons/primapox-192.png",type:"image/png",sizes:"192x192"}],
     shortcut: "/icons/primapox-32.png",
@@ -28,8 +28,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     siteName: "Primapox",
-    title: "Primapox | Pintura eletrostática a pó",
-    description: "Precisão no processo. Proteção em cada camada.",
+    title: "Primapox",
+    description: "Se é metal, Primapox pinta e protege!",
   },
 };
 
@@ -40,7 +40,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="pt-BR" data-scroll-behavior="smooth" className={inter.variable}>
       <body>
         <StructuredData />
-        <a className="skip-link" href="#conteudo">Pular para o conteúdo</a>
         <SiteHeader />
         <main id="conteudo">{children}</main>
         <SiteFooter />

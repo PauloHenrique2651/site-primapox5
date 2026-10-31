@@ -313,3 +313,15 @@
 .formCard { border-radius: 10px; }
 .timeline::after { background: #192636; }
 .dot { background: #192636; box-shadow: 0 0 0 3px #fff, 0 0 0 4px #192636; }
+
+
+/* ---------- Home with only the legacy home content ---------- */
+.heroInner { padding-block: 4rem 6rem; }
+.numbersTitle { margin: 0 0 1rem; color: #fff; font: 500 1rem/1 var(--font-inter); text-align: center; }
+.advantageRow { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 0; padding: 0 0 .5rem; list-style: none; }
+.advantageRow li { padding: 1.4rem 1rem; color: #fff; border: 1px solid rgba(255,255,255,.4); border-radius: 25px; font: 600 1.15rem/1.3 var(--font-inter); text-align: center; }
+.numbers { padding-block: 2.5rem; }
+.map { width: 100%; min-height: 380px; border: 0; border-radius: 10px; }
+.centerRow { display: flex; justify-content: center; margin-top: 1.5rem; }
+.contact { color: var(--ink); background: #f4f6fb; }
+@media (max-width: 700px) { .advantageRow { grid-template-columns: 1fr; } }

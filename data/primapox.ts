@@ -23,6 +23,8 @@ export const home = {
   locationTitle: "Localização",
   locationText: "Localizados na Praça Itapitanga nº 10, em Vigario Geral, contamos com a estrutura ideal pra atender você e seus clientes",
   more: "Saiba Mais",
+  // Home form, as on index.php (placeholders inside the fields, button "OK").
+  form: { name: "Nome", company: "empresa", ddd: "DDD", phone: "Telefone", email: "e-mail", notes: "observações...", send: "OK" },
 };
 
 // --- A Primapox (empresa.php) ---
@@ -181,5 +183,6 @@ export const contact = {
   mapTitle: "Localização",
 };
 
-// --- Rodapé (rdp.gif) ---
+// --- Rodapé (rdp.gif), exactly as the legacy footer image reads ---
 export const footerRights = "Primapox - Todos os Direitos Reservados";
+export const footerLines = ["Praça 10, 42  - Vigário Geral - Rio de Janeiro", "(21) 3172-2000 - primapox@primapox.com"];

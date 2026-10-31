@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 // Set to the public deployment URL until the main domain is migrated.
 const configuredUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://site-primapox5.vercel.app";
 export const siteUrl = new URL(configuredUrl).origin;
-export const siteRoutes = ["/", "/empresa", "/servicos", "/manutencao", "/galeria", "/contato", "/politica-de-privacidade"] as const;
+export const siteRoutes = ["/", "/empresa", "/servicos", "/manutencao", "/galeria", "/contato"] as const;
 
 export function pageMetadata(path: string, title: string, description: string): Metadata {
   const url = `${siteUrl}${path}`;
@@ -14,7 +14,7 @@ export function pageMetadata(path: string, title: string, description: string): 
     openGraph: {
       title: title.includes("Primapox") ? title : `${title} | Primapox`,
       description, url, type: "website", locale: "pt_BR", siteName: "Primapox",
-      images: [{ url: `${siteUrl}/brand/primapox-og.jpg`, width:1200, height:630, alt:"Primapox — pintura eletrostática a pó" }],
+      images: [{ url: `${siteUrl}/brand/primapox-og.jpg`, width:1200, height:630, alt:"Primapox" }],
     },
     twitter: {
       card: "summary_large_image", title, description,
