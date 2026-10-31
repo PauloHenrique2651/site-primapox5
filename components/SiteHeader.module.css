@@ -30,7 +30,7 @@
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 1.5rem;
-  min-height: calc(var(--header-h) - 40px);
+  min-height: var(--header-h);
   padding-block: .7rem;
   transition: min-height 240ms ease;
 }
@@ -178,3 +178,4 @@
 .toggle { background: transparent; border: 1px solid rgba(255,255,255,.6); }
 .mobile { color: #fff; background: #192636; }
 .mobile .mobileCta { border: 1px solid #fff; border-radius: 25px; background: transparent; }
+.toggle { justify-self: end; grid-column: -2; }

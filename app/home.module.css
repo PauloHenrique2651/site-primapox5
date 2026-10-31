@@ -325,3 +325,14 @@
 .centerRow { display: flex; justify-content: center; margin-top: 1.5rem; }
 .contact { color: var(--ink); background: #f4f6fb; }
 @media (max-width: 700px) { .advantageRow { grid-template-columns: 1fr; } }
+
+/* ---------- Hero as on olgacolor.com.br: full-bleed footage straight under the header, no tint ---------- */
+.hero { min-height: calc(100svh - var(--header-h)); align-items: end; background: #192636; }
+.video { filter: saturate(1.08) contrast(1.06); }
+.media::after { background: linear-gradient(0deg, rgba(25, 38, 54, .92) 0%, rgba(25, 38, 54, .55) 30%, rgba(25, 38, 54, 0) 62%); }
+.heroInner { align-self: end; justify-items: start; margin-inline: auto; padding-block: 0 clamp(3rem, 7vh, 5rem); text-align: left; }
+.heroInner > * { margin-inline: 0; }
+.hero h1 { max-width: none; font: 600 clamp(2.4rem, 4.6vw, 3.6rem)/1.1 var(--font-inter); letter-spacing: 0; text-shadow: 0 2px 24px rgba(0, 0, 0, .35); }
+.lead { max-width: 640px; margin-top: 1rem; color: #e6ebf2; font-size: clamp(1rem, 1.2vw, 1.15rem); }
+.videoToggle { top: auto; bottom: clamp(3rem, 7vh, 5rem); background: rgba(25, 38, 54, .55); }
+@media (max-width: 700px) { .heroInner { padding-bottom: 5.5rem; } .videoToggle { bottom: 1.25rem; } }
