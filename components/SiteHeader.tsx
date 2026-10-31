@@ -7,7 +7,6 @@ import { BrandMark } from "@/components/BrandMark";
 import { SocialLinks } from "@/components/SocialLinks";
 import { useHeaderState } from "@/components/useHeaderState";
 import { company } from "@/data/site";
-import { whatsappLink } from "@/data/whatsapp";
 import { menu } from "@/data/menu";
 import styles from "./SiteHeader.module.css";
 
@@ -32,7 +31,6 @@ export function SiteHeader() {
       <div className={styles.utility}>
         <div className={`shell ${styles.utilityInner}`}>
           <a href={`mailto:${company.email}`}>{company.email}</a>
-          <a href={whatsappLink()} target="_blank" rel="noopener noreferrer">WhatsApp {company.whatsappLabel}</a>
           <a href="tel:+552134487320">{company.phoneMain}</a>
           <span>Praça Itapitanga 10, Vigário Geral</span>
           <SocialLinks className={styles.social} />

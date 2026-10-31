@@ -11,7 +11,7 @@ export function StructuredData() {
         image: `${siteUrl}/brand/primapox-og.jpg`, email: company.email,
         telephone: "+552134487320", foundingDate: "1993-07-13",
         address: {"@type":"PostalAddress",streetAddress:"Praça Itapitanga, 10 — Vigário Geral",addressLocality:"Rio de Janeiro",addressRegion:"RJ",addressCountry:"BR"},
-        contactPoint: {"@type":"ContactPoint",telephone:`+${company.whatsappNumber}`,email:company.email,contactType:"customer service",availableLanguage:"Portuguese"},
+        contactPoint: {"@type":"ContactPoint",telephone:"+552134487320",email:company.email,contactType:"customer service",availableLanguage:"Portuguese"},
         hasMap: company.mapsUrl,
         ...(socialProfiles.length ? { sameAs: socialProfiles.map((profile) => profile.url) } : {}),
       },

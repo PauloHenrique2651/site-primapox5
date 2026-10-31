@@ -101,7 +101,7 @@ export const services = {
     ["Soda cáustica 10%", "600h(LA)"],
     ["Soda cáustica 20%", "600h (LA)"],
     ["Ácido clorídrico 10%", "300h (I)"],
-    ["cido clorídrico 30%", "200h(LA)"],
+    ["Ácido clorídrico 30%", "200h(LA)"],
     ["Ácido sulfúrico 10%", "300h(I)"],
     ["Ácido sulfúrico 40%", "300h(I)"],
     ["Ácido acético 10%", "300h(LA)"],

@@ -163,3 +163,18 @@
   .utilityInner { justify-content: space-between; gap: 1rem; font-size: .85rem; }
   .header { --logo-width: 150px; }
 }
+
+/* ---------- Olgacolor reverse engineering: dark slate sticky header (rgba(25,38,54,.95)) ---------- */
+.header { color: #fff; background: rgba(25, 38, 54, .97); box-shadow: none; }
+.header[data-scrolled="true"] { box-shadow: 0 8px 26px rgba(0, 0, 0, .3); }
+.utility { background: transparent; border-bottom: 1px solid rgba(255,255,255,.08); font-size: .8rem; }
+.brand { padding: 6px 10px; background: #fff; border-radius: 6px; box-sizing: content-box; }
+.nav > a, .group > button { color: #fff; font: 500 .9rem/1 var(--font-inter); }
+.nav > a::after { background: #fff; height: 2px; bottom: 8px; }
+.nav > a:hover, .group > button:hover, .group > button[aria-expanded="true"] { color: #fff; background: rgba(255,255,255,.08); }
+.nav > a[aria-current="page"] { color: #fff; }
+.cta { min-height: 44px; padding: 0 1.4rem; color: #fff; background: transparent; border: 1px solid #fff; border-radius: 25px; box-shadow: none; font: 500 .9rem/1 var(--font-inter); }
+.cta:hover { color: #192636; background: #fff; transform: none; }
+.toggle { background: transparent; border: 1px solid rgba(255,255,255,.6); }
+.mobile { color: #fff; background: #192636; }
+.mobile .mobileCta { border: 1px solid #fff; border-radius: 25px; background: transparent; }

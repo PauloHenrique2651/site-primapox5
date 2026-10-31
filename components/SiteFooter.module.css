@@ -62,3 +62,10 @@
   .bottom { flex-direction: column; }
 }
 @media (min-width: 1001px) { .columns { grid-template-columns: 1fr 1.2fr 1.2fr; } }
+
+/* Olgacolor-style footer: dark slate, small uppercase column headings */
+.footer { color: #c7ced8; background: #192636; }
+.band { background: #fff; border-top: 0; }
+.bandCta { color: #192636; background: transparent; border: 1px solid #192636; border-radius: 25px; }
+.bandCta:hover { color: #fff; background: #192636; }
+.columns h2 { color: #fff; font: 600 .85rem/1.2 var(--font-inter); letter-spacing: .08em; text-transform: uppercase; }

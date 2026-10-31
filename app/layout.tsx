@@ -1,18 +1,16 @@
 import type { Metadata, Viewport } from "next";
-import { Red_Hat_Display, Red_Hat_Text } from "next/font/google";
+import { Inter } from "next/font/google";
 import { StructuredData } from "@/components/StructuredData";
 import { siteUrl } from "@/data/seo";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { ScrollTone } from "@/components/ScrollTone";
-import { WhatsAppButton } from "@/components/WhatsAppButton";
 import "./globals.css";
 import "./responsive-refinements.css";
 import "./theme.css";
 
-const display = Red_Hat_Display({ subsets: ["latin"], weight: ["500", "700", "800", "900"], variable: "--font-display", display: "swap" });
-const body = Red_Hat_Text({ subsets: ["latin"], weight: ["400", "500", "600", "700"], variable: "--font-body", display: "swap" });
+const inter = Inter({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700"], variable: "--font-inter", display: "swap" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -35,11 +33,11 @@ export const metadata: Metadata = {
   },
 };
 
-export const viewport: Viewport = {themeColor:"#002398"};
+export const viewport: Viewport = {themeColor:"#192636"};
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="pt-BR" data-scroll-behavior="smooth" className={`${display.variable} ${body.variable}`}>
+    <html lang="pt-BR" data-scroll-behavior="smooth" className={inter.variable}>
       <body>
         <StructuredData />
         <a className="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -48,7 +46,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <SiteFooter />
         <ScrollReveal />
         <ScrollTone />
-        <aside aria-label="Contato rápido"><WhatsAppButton /></aside>
       </body>
     </html>
   );

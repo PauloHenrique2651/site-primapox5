@@ -51,3 +51,11 @@
 .inner > p { max-width: 580px; margin: 1.4rem 0 0; color: #d6ddf7; font-size: 1.15rem; line-height: 1.65; }
 
 @media (prefers-reduced-motion: reduce) { .inner { animation: none; } }
+
+/* Olgacolor-style inner hero: dark slate photo band, centred title */
+.hero { background: #192636; text-align: center; }
+.hero::before { background: rgba(25, 38, 54, .82); }
+.hero::after { display: none; }
+.inner { display: grid; justify-items: center; }
+.hero h1 { max-width: 22ch; font: 600 clamp(2rem, 3.6vw, 3rem)/1.2 var(--font-inter); letter-spacing: .02em; }
+.crumbs { color: #c7ced8; }

@@ -5,10 +5,8 @@ export const company = {
   foundedYear: 1993,
   yearsOfExperience: 33,
   phoneMain: "(21) 3448-7320",
-  whatsappNumber: "5521970130465",
-  whatsappLabel: "(21) 97013-0465",
   phones: ["(21) 3448-7320", "(21) 3452-8763", "(21) 3452-8764", "(21) 3452-8765"],
-  // E-mail para dúvidas, solicitações e orçamentos; WhatsApp como canal direto.
+  // Canal único para dúvidas, solicitações e orçamentos.
   email: "primapox@primapox.com",
   address: "Praça Itapitanga, 10 — Vigário Geral, Rio de Janeiro — RJ",
   mapsUrl: "https://maps.app.goo.gl/G8nsQfmqLi8PusUA7",

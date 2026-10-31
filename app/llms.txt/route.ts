@@ -14,7 +14,7 @@ export function GET() {
 - [Serviços](${siteUrl}/servicos): benefícios da tinta em pó, tipos de tinta, tabela da tinta em pó à base de poliéster, material, pré-tratamento, pintura e cura.
 - [Manutenção](${siteUrl}/manutencao): limpeza, intervalos, fatores ambientais, requisitos de garantia, retoque e silicone industrial.
 - [Galeria de Fotos](${siteUrl}/galeria): 46 fotografias.
-- [Fale Conosco](${siteUrl}/contato): telefone (21) 3448-7320, e-mail ${company.email} e WhatsApp ${company.whatsappLabel}.
+- [Fale Conosco](${siteUrl}/contato): telefone (21) 3448-7320, e-mail ${company.email}.
 
 ## Limites
 A escolha do sistema depende do material, das dimensões e do ambiente de uso. Os valores do catálogo histórico não substituem o boletim técnico da tinta. As imagens antes/depois são ilustrativas, geradas por IA; a galeria é acervo real. O site prepara a mensagem de orçamento no aplicativo de e-mail do visitante, que anexa os arquivos e confirma o envio; o site não armazena dados nem anexos.

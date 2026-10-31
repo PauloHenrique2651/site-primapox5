@@ -1,6 +1,9 @@
 /* Proposta 05 — inspirada na Olgacolor: apresentação institucional completa e corporativa. */
 :root {
-  --navy-deep: #0b1650;
+  --font-display: var(--font-inter);
+  --font-body: var(--font-inter);
+  --slate: #192636;
+  --navy-deep: #192636;
   --mist: #f4f6fb;
   --ink: #0d1530;
   --muted: #4a536e;
@@ -71,3 +74,6 @@ main { padding-top: var(--header-h); }
 
 @media (max-width: 1180px) { :root { --header-h: 136px; } }
 @media (max-width: 640px) { :root { --header-h: 126px; } }
+
+/* Olgacolor reverse engineering: Inter, dark slate surfaces, pill buttons, centred section titles */
+.button { border-radius: 25px !important; }

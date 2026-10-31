@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { about, contact, services } from "@/data/primapox";
 import { company } from "@/data/site";
-import { whatsappLink } from "@/data/whatsapp";
 import { LegacyContactForm } from "@/components/LegacyContactForm";
 import styles from "./LegacyContent.module.css";
 
@@ -72,7 +71,7 @@ export function ServicesContent() {
           <h3 className={styles.h3} style={{ marginTop: "2.5rem" }}>{services.materialTitle}</h3>
           <p>{services.materialIntro}</p>
           <dl className={styles.materials}>
-            {services.materials.map(([name, text]) => <div key={name}><dt>{name}</dt><dd>{text}</dd></div>)}
+            {services.materials.map(([name, text]) => <div key={name}><dt>{name}</dt><dd>- {text}</dd></div>)}
           </dl>
           <p className={styles.closing}>{services.closing}</p>
         </div>
@@ -126,7 +125,6 @@ export function ContactContent() {
             {contact.addressLines.map((line) => <span key={line}>{line}</span>)}
             {contact.phoneLines.map((line) => <span key={line}>{line}</span>)}
             <a href={`mailto:${contact.email}`}>{contact.email}</a>
-            <a href={whatsappLink()} target="_blank" rel="noopener noreferrer">WhatsApp {company.whatsappLabel}</a>
           </div>
           <h3 className={styles.h3} style={{ marginTop: "2rem" }}>{contact.mapTitle}</h3>
           <iframe className={styles.map} src={company.mapsEmbedUrl} title="Localização da Primapox no Google Maps" loading="lazy" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />
