@@ -15,7 +15,7 @@ export function BeforeAfter() {
           <Image src="/surfaces/untreated-rust.webp" alt="Gabinete de aço com ferrugem superficial, antes da preparação" fill sizes="(max-width: 1100px) 90vw, 1320px" quality={90} className={styles.photo} />
         </div>
         <div className={`${styles.layer} ${styles.after}`}>
-          <Image src="/surfaces/powder-coated.webp" alt="O mesmo gabinete após preparação e revestimento azul acetinado, em imagem ilustrativa" fill sizes="(max-width: 1100px) 90vw, 1320px" quality={90} className={styles.photo} />
+          <Image src="/surfaces/powder-coated.webp" alt="O mesmo gabinete após preparação e revestimento azul acetinado" fill sizes="(max-width: 1100px) 90vw, 1320px" quality={90} className={styles.photo} />
         </div>
         <span className={`${styles.label} ${styles.beforeLabel}`}>Antes · sem tratamento</span>
         <span className={`${styles.label} ${styles.afterLabel}`}>Depois · preparado e revestido</span>
@@ -33,10 +33,6 @@ export function BeforeAfter() {
           aria-valuetext={`${position}% da imagem antes do tratamento`}
         />
       </div>
-      <p className={styles.caption}>
-        <span>Demonstração ilustrativa</span>
-        Imagens geradas por IA para ilustrar a preparação e o revestimento. Não representam um trabalho específico da Primapox.
-      </p>
     </div>
   );
 }

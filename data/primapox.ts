@@ -31,7 +31,7 @@ export const home = {
   comparison: {
     eyebrow: "Visualização",
     title: ["A camada muda", "a relação com o ambiente."],
-    text: "Arraste o controle para visualizar uma representação da transição entre a superfície exposta e o acabamento revestido.",
+    text: "Arraste o controle para comparar a superfície exposta e o acabamento revestido.",
   },
   galleryTitle: "Galeria de Fotos",
   galleryPreview: [13, 17, 36, 45, 22, 40],
