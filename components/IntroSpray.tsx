@@ -25,6 +25,7 @@ export function IntroSpray() {
       <div className={styles.stage}>
         <div className={styles.gun}>
           <img className={styles.logo} src="/brand/primapox-logo.webp" alt="" width={1658} height={672} />
+          <span className={styles.cover} />
           <span className={styles.flash} />
           {DROPS.map((d, i) => (
             <i
@@ -33,7 +34,7 @@ export function IntroSpray() {
               style={{
                 "--dx": `${d.dx.toFixed(1)}cqw`,
                 "--dy": `${(d.dy * 0.405).toFixed(1)}cqw`, // logo height is 40.5% of its width
-                "--s": `${d.size.toFixed(1)}px`,
+                "--s": `${(d.size / 5.6).toFixed(2)}cqw`,
                 "--d": `${d.delay.toFixed(2)}s`,
                 background: d.color,
               } as React.CSSProperties}
