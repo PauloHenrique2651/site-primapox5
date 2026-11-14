@@ -56,7 +56,7 @@ export const about = {
     "Atuando há mais de 20 anos no ramo de pintura industrial, a Primapox é uma empresa que vem se destacando no mercado, pelo alto padrão de qualidade de sua pintura e pelo atendimento personalizado ao cliente; fatores predominantes de seu desempenho e credibilidade.",
     "Seus projetos vão vibrar com nossas cores vivas  nas esquadrias, batentes, caixilhos, forros, divisórias, fachadas, telhas metálicas, coberturas, estruturas espaciais, etc.",
     "Além disso, vão durar muito mais tempo, pois a proteção anti-corrosiva é superior ao da anodização e da pintura líquida, como também à resistência química e física.",
-    "Estamos capacitados para executar pintura em peças com até 6,5m de comprimento.",
+    "Estamos capacitados para executar pintura em peças com até 8 metros de comprimento.",
     "CONSULTE-NOS! Nós teremos o máximo prazer em mostrar-lhes todas as vantagens deste sistema de revestimento.",
   ],
 };

@@ -10,7 +10,7 @@ export function GET() {
 
 ## Conteúdo
 - [Home](${siteUrl}/): Nossos Serviços, Principais Vantagens, A Primapox, Localização e Fale Conosco.
-- [Quem Somos](${siteUrl}/empresa): Quem Somos; pintura em peças com até 6,5m de comprimento.
+- [Quem Somos](${siteUrl}/empresa): Quem Somos; pintura em peças com até 8 metros de comprimento.
 - [Serviços](${siteUrl}/servicos): benefícios da tinta em pó, tipos de tinta, tabela da tinta em pó à base de poliéster, material, pré-tratamento, pintura e cura.
 - [Manutenção](${siteUrl}/manutencao): limpeza, intervalos, fatores ambientais, requisitos de garantia, retoque e silicone industrial.
 - [Galeria de Fotos](${siteUrl}/galeria): 46 fotografias.
