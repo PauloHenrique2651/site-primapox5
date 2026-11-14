@@ -179,3 +179,30 @@
 .mobile { color: #fff; background: #192636; }
 .mobile .mobileCta { border: 1px solid #fff; border-radius: 25px; background: transparent; }
 .toggle { justify-self: end; grid-column: -2; }
+
+/* ---------- every page: white behind the logo, easing into the header blue towards the menu ----------
+   Eased stops (ease-in-out) between --fade-from and --fade-to read as one smooth wash instead of a band.
+   Desktop keeps the menu on solid blue; on smaller screens only the logo and the menu button share the bar,
+   so the fade gets more room. */
+.header {
+  --fade-from: 16%;
+  --fade-to: 54%;
+  --span: calc(var(--fade-to) - var(--fade-from));
+  background:
+    linear-gradient(90deg in oklab,
+      rgba(25, 38, 54, 0) var(--fade-from),
+      rgba(25, 38, 54, .03) calc(var(--fade-from) + var(--span) * .1),
+      rgba(25, 38, 54, .1) calc(var(--fade-from) + var(--span) * .2),
+      rgba(25, 38, 54, .22) calc(var(--fade-from) + var(--span) * .3),
+      rgba(25, 38, 54, .38) calc(var(--fade-from) + var(--span) * .4),
+      rgba(25, 38, 54, .57) calc(var(--fade-from) + var(--span) * .5),
+      rgba(25, 38, 54, .74) calc(var(--fade-from) + var(--span) * .6),
+      rgba(25, 38, 54, .86) calc(var(--fade-from) + var(--span) * .7),
+      rgba(25, 38, 54, .93) calc(var(--fade-from) + var(--span) * .8),
+      rgba(25, 38, 54, .96) calc(var(--fade-from) + var(--span) * .9),
+      rgba(25, 38, 54, .97) var(--fade-to)),
+    #fff;
+}
+@media (max-width: 1180px) {
+  .header { --fade-from: 30%; --fade-to: 92%; }
+}

@@ -1,3 +1,4 @@
+import { PolyesterSection } from "@/components/PolyesterSection";
 import Image from "next/image";
 import { about, contact, services } from "@/data/primapox";
 import { company } from "@/data/site";
@@ -38,15 +39,7 @@ export function ServicesContent() {
         </div>
       </section>
 
-      <section className={`${styles.section} ${styles.alt}`}>
-        <div className="shell">
-          <h2 className={styles.h2}>{services.typesTitle}</h2>
-          <div className={styles.cards}>
-            {services.types.map(([name, text]) => <article key={name}><h3>{name}</h3><p>{text}</p></article>)}
-          </div>
-          <p className={styles.note}>{services.typesNote}</p>
-        </div>
-      </section>
+      <PolyesterSection />
 
       <section className={styles.section} id="ficha-tecnica">
         <div className="shell">

@@ -1,0 +1,38 @@
+.section { padding-block: clamp(4rem, 8vw, 7rem); background: #f4f6fb; }
+
+.head { display: grid; grid-template-columns: 1fr minmax(0, 460px); gap: 2rem; align-items: end; }
+.eyebrow { margin: 0 0 .8rem; color: var(--brand-blue); font: 600 .95rem/1 var(--font-inter); }
+.head h2 { margin: 0; color: #192636; font: 600 clamp(2rem, 3.8vw, 3.2rem)/1.08 var(--font-inter); }
+.intro { margin: 0; color: #4a536e; font-size: 1.05rem; line-height: 1.6; }
+
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 2.5rem 0 0; padding: 0; list-style: none; }
+.grid li {
+  padding: 1.8rem 1.6rem; background: #fff; border: 1px solid rgba(13, 21, 48, .1); border-radius: 22px;
+  transition: transform 260ms cubic-bezier(.2, .7, .2, 1), box-shadow 260ms ease;
+}
+.grid li:hover { transform: translateY(-4px); box-shadow: 0 18px 40px -24px rgba(25, 38, 54, .45); }
+.grid h3 { margin: 0 0 .6rem; color: #192636; font: 600 1.2rem/1.25 var(--font-inter); }
+.grid h3::before { content: ""; display: block; width: 26px; height: 3px; margin-bottom: 1rem; border-radius: 2px; background: var(--red); }
+.grid p { margin: 0; color: #4a536e; font-size: .98rem; line-height: 1.6; }
+
+.line {
+  position: relative; display: grid; grid-template-columns: auto 1fr; gap: clamp(1.5rem, 4vw, 4rem); align-items: center;
+  margin-top: 1rem; padding: clamp(2rem, 4vw, 3rem); overflow: hidden; color: #fff; background: #192636; border-radius: 22px;
+}
+.figure { margin: 0; font: 500 clamp(1.2rem, 2vw, 1.6rem)/1 var(--font-inter); color: #b9c3e6; white-space: nowrap; }
+.figure b { color: #fff; font: 700 clamp(5rem, 11vw, 9rem)/.85 var(--font-inter); letter-spacing: -.04em; }
+.line h3 { margin: 0 0 .6rem; font: 600 clamp(1.4rem, 2.2vw, 1.9rem)/1.2 var(--font-inter); }
+.line p { margin: 0; color: #c9d1e8; font-size: 1.05rem; line-height: 1.6; max-width: 60ch; }
+.track { position: absolute; left: 0; right: 0; bottom: 0; height: 6px; background: rgba(255, 255, 255, .1); }
+.track i { display: block; height: 100%; background: linear-gradient(90deg, #002398, var(--red)); transform-origin: 0 50%; }
+
+@supports (animation-timeline: view()) {
+  .track i { animation: travel linear both; animation-timeline: view(); animation-range: entry 20% cover 55%; }
+}
+@keyframes travel { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+@media (max-width: 900px) {
+  .head, .line { grid-template-columns: 1fr; }
+  .grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }

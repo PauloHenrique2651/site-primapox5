@@ -2,9 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { pageMetadata } from "@/data/seo";
 import { HeroBackgroundVideo } from "@/components/HeroBackgroundVideo";
-import { HomeContactForm } from "@/components/HomeContactForm";
+import { BeforeAfter } from "@/components/BeforeAfter";
+import { AdvantagePanels } from "@/components/AdvantagePanels";
 import { company } from "@/data/site";
-import { home } from "@/data/primapox";
+import { home, services, tabs } from "@/data/primapox";
 import styles from "./home.module.css";
 
 export const metadata = pageMetadata("/", "Primapox", home.servicesText);
@@ -18,15 +19,15 @@ export default function HomePage() {
           <HeroBackgroundVideo src="/media/hero-olgacolor.webm" poster="/media/primapox-hero-poster.webp" className={styles.video} buttonClassName={styles.videoToggle} />
         </div>
         <div className={`shell ${styles.heroInner}`}>
-          <h1 id="nossos-servicos">{home.servicesTitle}</h1>
-          <p className={styles.lead}>{home.servicesText}</p>
+          <h1 id="nossos-servicos">{home.heroTitle[0]}<br /><em>{home.heroTitle[1]}</em></h1>
+          <p className={styles.lead}>{home.heroText}</p>
         </div>
       </section>
 
       <section className={styles.numbers} aria-labelledby="vantagens">
         <div className="shell">
           <p id="vantagens" className={styles.numbersTitle}>{home.advantagesTitle}</p>
-          <ul className={styles.advantageRow}>{home.advantages.map((item) => <li key={item}>{item}</li>)}</ul>
+          <AdvantagePanels />
         </div>
       </section>
 
@@ -40,10 +41,41 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className={styles.contact} aria-labelledby="fale-conosco">
+      <section className={styles.compare} aria-labelledby="visualizacao">
         <div className="shell">
-          <div className={styles.head}><h2 id="fale-conosco">{home.contactTitle}</h2></div>
-          <div className={styles.formCard}><HomeContactForm /></div>
+          <div className={styles.sectionHead}>
+            <div>
+              <p className={styles.eyebrow}>{home.comparison.eyebrow}</p>
+              <h2 id="visualizacao">{home.comparison.title[0]}<br />{home.comparison.title[1]}</h2>
+            </div>
+            <p>{home.comparison.text}</p>
+          </div>
+          <BeforeAfter />
+        </div>
+      </section>
+
+      <section className={styles.lineBand} aria-labelledby="linha-8m">
+        <div className={`shell ${styles.lineInner}`}>
+          <p className={styles.lineFigure}><b>{services.line.value}</b> {services.line.unit}</p>
+          <div>
+            <h2 id="linha-8m">{services.line.title}</h2>
+            <p>{services.line.text}</p>
+            <Link className={styles.lineLink} href="/servicos">{tabs.find((t) => t.href === "/servicos")?.label}</Link>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.galleryPrev} aria-labelledby="galeria-home">
+        <div className="shell">
+          <div className={styles.sectionHead}>
+            <h2 id="galeria-home">{home.galleryTitle}</h2>
+          </div>
+          <ul className={styles.galleryGrid}>
+            {home.galleryPreview.map((n) => (
+              <li key={n}><Link href="/galeria"><Image src={`/gallery/${n}.webp`} alt="" fill sizes="(max-width: 700px) 46vw, 30vw" /></Link></li>
+            ))}
+          </ul>
+          <div className={styles.centerRow}><Link className={styles.textLink} href="/galeria">{home.galleryTitle}</Link></div>
         </div>
       </section>
 

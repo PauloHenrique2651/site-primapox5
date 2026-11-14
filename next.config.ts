@@ -34,13 +34,15 @@ const nextConfig: NextConfig = {
       "font-src 'self'",
       `connect-src 'self'${production ? "" : " ws: wss:"}`,
       "media-src 'self'", "frame-src https://www.google.com",
-      "object-src 'none'", "base-uri 'self'", "form-action 'self'", "frame-ancestors 'none'",
+      "object-src 'none'", "base-uri 'self'", "form-action 'self'",
+      // dev only: lets the local side-by-side comparison page (localhost) embed the site
+      production ? "frame-ancestors 'none'" : "frame-ancestors 'self' http://localhost:*",
     ].join("; ");
     return [{ source:"/:path*", headers: [
       {key:"X-Content-Type-Options",value:"nosniff"},
       {key:"Referrer-Policy",value:"strict-origin-when-cross-origin"},
       {key:"Permissions-Policy",value:'camera=(), microphone=(), geolocation=(), web-share=(self), fullscreen=(self "https://www.google.com")'},
-      {key:"X-Frame-Options",value:"DENY"},
+      ...(production ? [{key:"X-Frame-Options",value:"DENY"}] : []),
       {key:"Content-Security-Policy",value:csp},
       ...(production ? [{key:"Strict-Transport-Security",value:"max-age=31536000"}] : []),
     ] }];

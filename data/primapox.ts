@@ -3,8 +3,7 @@
 // Do not reword: spelling, punctuation and capitalisation follow the original.
 
 export const tabs = [
-  { label: "Home", href: "/" },
-  { label: "A Primapox", href: "/empresa" },
+  { label: "Quem Somos", href: "/empresa" },
   { label: "Serviços", href: "/servicos" },
   { label: "Manutenção", href: "/manutencao" },
   { label: "Galeria de Fotos", href: "/galeria" },
@@ -13,6 +12,29 @@ export const tabs = [
 
 // --- Home (index.php) ---
 export const home = {
+  // hero headline and line taken from the reference site (siteprimapox.vercel.app), at the client's request
+  heroTitle: ["Proteção que adere.", "Qualidade que permanece."],
+  heroText: "Revestimento técnico para componentes metálicos, com cobertura uniforme, alta resistência e acabamento de alto padrão.",
+  // panel opened by "Alto Padrão de Qualidade"; text from the reference site's Aplicações section
+  aplicacoes: {
+    eyebrow: "Aplicações",
+    title: ["Onde o acabamento", "precisa trabalhar."],
+    text: "Da arquitetura ao equipamento industrial, cada peça pede uma leitura própria de material, geometria e ambiente de uso.",
+    items: [
+      { title: "Arquitetura metálica", text: "Esquadrias, batentes, caixilhos, fachadas, telhas e coberturas metálicas, corrimãos e forros.", image: "/gallery/17.webp", alt: "Passarela metálica com estrutura e guarda-corpos brancos, do acervo Primapox" },
+      { title: "Componentes industriais", text: "Gabinetes, painéis, estruturas e peças metálicas com exigência de proteção e acabamento.", image: "/gallery/45.webp", alt: "Componente industrial de grande porte com acabamento azul, do acervo Primapox" },
+      { title: "Varejo e exposição", text: "Gôndolas, araras, cestos, carrinhos, prateleiras e placas de sinalização para supermercados e lojas.", image: "/gallery/44.webp", alt: "Perfis metálicos com acabamento amarelo e grafite, do acervo Primapox" },
+      { title: "Interiores e mobiliário", text: "Móveis metálicos, divisórias, luminárias e spots, aramados e armários de banheiro e cozinha.", image: "/gallery/40.webp", alt: "Divisória de vidro com estrutura metálica escura em ambiente interno, do acervo Primapox" },
+    ],
+  },
+  // before/after slider, text from the reference site's "Visualização" section
+  comparison: {
+    eyebrow: "Visualização",
+    title: ["A camada muda", "a relação com o ambiente."],
+    text: "Arraste o controle para visualizar uma representação da transição entre a superfície exposta e o acabamento revestido.",
+  },
+  galleryTitle: "Galeria de Fotos",
+  galleryPreview: [13, 17, 36, 45, 22, 40],
   servicesTitle: "Nossos Serviços",
   servicesText: "Executamos pintura eletrostática com tinta em pó, ideais para: esquadrias, batentes, caixilhos, forros, divisórias, fachadas, telhas metálicas, coberturas, estruturas espaciais, etc.",
   advantagesTitle: "Principais Vantagens:",
@@ -63,6 +85,27 @@ export const services = {
     ["Poliuretano:", "Composta e com características semelhantes às dos poliésteres , porém com alastramento superior e possibilidade de atingir camadas inferiores a 40 micra na aplicação de cores escuras."],
   ],
   typesNote: "Obs.: A Primapox trabalha apenas com as resinas Híbrida e Poliéster.",
+  // Primapox works only with polyester (client, 2026-11). Each claim is backed by the polyester
+  // technical sheet below (Coraldur) or by the legacy Serviços text.
+  polyester: {
+    eyebrow: "Nossa tinta",
+    title: "Tinta em pó Poliéster",
+    intro: "A Primapox trabalha com tinta em pó à base de poliéster, indicada para superfícies metálicas em peças de uso exterior, especialmente peças de efeito arquitetônico.",
+    advantages: [
+      ["Feita para o tempo", "Alta resistência aos raios U.V. e às intempéries: ótimo desempenho após 500h de U.V. e praticamente inalterada após 12 meses ao ar livre."],
+      ["Aderência total", "100% de aderência no scratch-test e flexibilidade sem fissuras, mesmo quando a peça é cortada depois de pintada."],
+      ["Proteção anticorrosiva", "Película uniforme que recobre cantos, bordas e arestas, sem deixar microcanais como a tinta líquida."],
+      ["Resistência química", "Água do mar e água industrial por 1000 horas sem alteração; resistente a detergentes, óleos e solventes."],
+      ["Brilho e cor", "Brilho de 90 a 100%, acabamento brilhante ou fosco e cores vivas e diversificadas."],
+      ["Sem solventes", "100% sólidos: não produz odores nem vapores e não agride o meio ambiente."],
+    ],
+  },
+  line: {
+    value: "8",
+    unit: "metros",
+    title: "Linha de pintura de 8 metros",
+    text: "Nossa linha recebe peças longas, como perfis, esquadrias e estruturas, inteiras e sem emendas. Boa parte das linhas de pintura trabalha com peças bem menores, o que muitas vezes obriga a cortar ou dividir o material.",
+  },
   tableTitle: "TINTA EM PÓ À BASE DE POLIÉSTER",
   physicalTitle: "Propriedades Físicas e Mecânicas",
   chemicalTitle: "Resistência aos Agentes Químicos",

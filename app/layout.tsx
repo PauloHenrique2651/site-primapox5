@@ -4,6 +4,7 @@ import { StructuredData } from "@/components/StructuredData";
 import { siteUrl } from "@/data/seo";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { IntroSpray } from "@/components/IntroSpray";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { ScrollTone } from "@/components/ScrollTone";
 import "./globals.css";
@@ -39,6 +40,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="pt-BR" data-scroll-behavior="smooth" className={inter.variable}>
       <body>
+        <IntroSpray />
         <StructuredData />
         <SiteHeader />
         <main id="conteudo">{children}</main>
