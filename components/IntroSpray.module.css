@@ -75,3 +75,6 @@
 }
 @keyframes settle { to { transform: scale(.9); opacity: 0; } }
 @keyframes curtain { to { opacity: 0; visibility: hidden; } }
+
+/* set by the inline script until the logo is decoded */
+.intro[data-wait], .intro[data-wait] * { animation-play-state: paused !important; }

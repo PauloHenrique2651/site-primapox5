@@ -19,12 +19,14 @@ function droplets(count: number) {
 
 const DROPS = droplets(48);
 
+const WAIT = `(function(){var el=document.getElementById("intro-spray");if(!el)return;el.setAttribute("data-wait","");var img=el.querySelector("img"),done=false;function go(){if(done)return;done=true;requestAnimationFrame(function(){requestAnimationFrame(function(){el.removeAttribute("data-wait")})})}if(img.complete){(img.decode?img.decode():Promise.resolve()).then(go,go)}else{img.addEventListener("load",function(){(img.decode?img.decode():Promise.resolve()).then(go,go)});img.addEventListener("error",go)}setTimeout(go,2500)})();`;
+
 export function IntroSpray() {
   return (
-    <div className={`intro-spray ${styles.intro}`} aria-hidden="true">
+    <div id="intro-spray" suppressHydrationWarning className={`intro-spray ${styles.intro}`} aria-hidden="true">
       <div className={styles.stage}>
         <div className={styles.gun}>
-          <img className={styles.logo} src="/brand/primapox-logo.webp" alt="" width={1658} height={672} />
+          <img className={styles.logo} src="/brand/primapox-logo-intro.webp" alt="" width={840} height={340} fetchPriority="high" decoding="sync" />
           <span className={styles.cover} />
           <span className={styles.flash} />
           {DROPS.map((d, i) => (
@@ -42,6 +44,9 @@ export function IntroSpray() {
           ))}
         </div>
       </div>
+      {/* hold every animation until the logo is decoded, so slow phones see the whole sequence
+          instead of a blank stage followed by the finished logo; gives up after 2.5s */}
+      <script dangerouslySetInnerHTML={{ __html: WAIT }} />
     </div>
   );
 }
