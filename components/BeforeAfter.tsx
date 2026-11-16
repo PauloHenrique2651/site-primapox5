@@ -12,13 +12,13 @@ export function BeforeAfter() {
     <div className={styles.wrap}>
       <div className={styles.canvas} style={{ "--position": `${position}%` } as React.CSSProperties}>
         <div className={styles.layer}>
-          <Image src="/surfaces/telha-antes.webp" alt="Telha de aço galvanizado muito enferrujada, antes da preparação" fill sizes="(max-width: 1100px) 90vw, 1320px" quality={90} className={styles.photo} />
+          <Image src="/surfaces/telha-antes.webp" alt="Telha de aço galvanizado enferrujada sobre bancada, antes do tratamento" fill sizes="(max-width: 1100px) 90vw, 1320px" quality={90} className={styles.photo} />
         </div>
         <div className={`${styles.layer} ${styles.after}`}>
-          <Image src="/surfaces/telha-depois.webp" alt="A mesma telha após preparação e pintura em tinta em pó cinza" fill sizes="(max-width: 1100px) 90vw, 1320px" quality={90} className={styles.photo} />
+          <Image src="/surfaces/telha-depois.webp" alt="A mesma telha após pintura eletrostática com tinta em pó poliéster cinza" fill sizes="(max-width: 1100px) 90vw, 1320px" quality={90} className={styles.photo} />
         </div>
         <span className={`${styles.label} ${styles.beforeLabel}`}>Antes · sem tratamento</span>
-        <span className={`${styles.label} ${styles.afterLabel}`}>Depois · preparado e revestido</span>
+        <span className={`${styles.label} ${styles.afterLabel}`}>Depois · tinta em pó poliéster</span>
         <div className={styles.divider} aria-hidden="true"><i className={styles.arrows} /></div>
         <span className={styles.hint} aria-hidden="true">Arraste para comparar</span>
         <input
