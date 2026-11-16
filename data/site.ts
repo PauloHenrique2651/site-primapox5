@@ -4,8 +4,6 @@ export const company = {
   foundedOn: "13 de julho de 1993",
   foundedYear: 1993,
   yearsOfExperience: 33,
-  phoneMain: "(21) 3448-7320",
-  phones: ["(21) 3448-7320", "(21) 3452-8763", "(21) 3452-8764", "(21) 3452-8765"],
   // Canal único para dúvidas, solicitações e orçamentos.
   email: "primapox@primapox.com",
   address: "Praça Itapitanga, 10 — Vigário Geral, Rio de Janeiro — RJ",

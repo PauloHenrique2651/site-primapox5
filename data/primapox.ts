@@ -233,17 +233,16 @@ export const galleryTitle = "Galeria de Fotos";
 // --- Fale Conosco (contato.php) ---
 export const contact = {
   title: "Contato",
-  intro: "Entre em contato pelo telefone (21) 3448-7320 ou preencha o formulário abaixo:",
+  intro: "Entre em contato pelo e-mail ou preencha o formulário abaixo:",
   fields: { name: "Nome:", message: "Mensagem:", phone: "Telefone:", email: "E-mail:", subject: "Assunto:" },
   clear: "Limpar",
   send: "Enviar",
   company: "Primapox",
   addressLines: ["Praça Itapitanga 10, Vigário Geral", "Rio de Janeiro - RJ"],
-  phoneLines: ["Tels.: (21) 3448-7320 / 3452-8763", "3452-8764 / 3452-8765"],
   email: "primapox@primapox.com",
   mapTitle: "Localização",
 };
 
 // --- Rodapé (rdp.gif), exactly as the legacy footer image reads ---
 export const footerRights = "Primapox - Todos os Direitos Reservados";
-export const footerLines = ["Praça 10, 42  - Vigário Geral - Rio de Janeiro", "(21) 3172-2000 - primapox@primapox.com"];
+export const footerLines = ["Praça 10, 42  - Vigário Geral - Rio de Janeiro", "primapox@primapox.com"];

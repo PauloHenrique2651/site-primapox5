@@ -41,7 +41,6 @@ export function SiteFooter() {
         <address className={styles.col}>
           <h2>Contato</h2>
           <ul>
-            {company.phones.map((p) => <li key={p}><a href={`tel:${p.replace(/\D/g, "")}`}>{p}</a></li>)}
             <li><a href={`mailto:${company.email}`}>{company.email}</a></li>
             <li><a href={company.mapsUrl} target="_blank" rel="noopener noreferrer">{company.address}</a></li>
           </ul>

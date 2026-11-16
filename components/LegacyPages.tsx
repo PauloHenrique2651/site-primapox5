@@ -121,7 +121,6 @@ export function ContactContent() {
           <div className={styles.contactCard}>
             <strong>{contact.company}</strong>
             {contact.addressLines.map((line) => <span key={line}>{line}</span>)}
-            {contact.phoneLines.map((line) => <span key={line}>{line}</span>)}
             <a href={`mailto:${contact.email}`}>{contact.email}</a>
           </div>
           <h3 className={styles.h3} style={{ marginTop: "2rem" }}>{contact.mapTitle}</h3>
