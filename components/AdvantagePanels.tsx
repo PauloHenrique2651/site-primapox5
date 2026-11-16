@@ -15,6 +15,7 @@ const LINKS: Record<string, string> = { "Cores Diversificadas e vivas": "/galeri
 export function AdvantagePanels() {
   const [open, setOpen] = useState<string | null>(null);
   const a = home.aplicacoes;
+  const c = home.competencia;
 
   return (
     <>
@@ -41,7 +42,24 @@ export function AdvantagePanels() {
 
       <div id={`vantagem-${home.advantages.indexOf("Alto Padrão de Qualidade")}`} className={styles.panel} data-open={open === "Alto Padrão de Qualidade"}>
         <div className={styles.inner}>
-          <div className={styles.head}>
+          <div className={styles.comp}>
+            <div className={styles.compText}>
+              <p className={styles.eyebrow}>{c.eyebrow}</p>
+              <h2>{c.title[0]}<br />{c.title[1]}</h2>
+              <p className={styles.aside}>{c.text}</p>
+              <ul className={styles.points}>
+                {c.points.map((pt, i) => <li key={pt}><b>{String(i + 1).padStart(2, "0")}</b>{pt}</li>)}
+              </ul>
+            </div>
+            <div className={styles.poly}>
+              <span className={styles.tag}>{c.polyester.tag}</span>
+              <h3>{c.polyester.title}</h3>
+              <p>{c.polyester.text}</p>
+              <Link className={styles.polyLink} href="/servicos#poliester">{c.polyester.link} <b aria-hidden="true">→</b></Link>
+            </div>
+          </div>
+          <p className={styles.slogan}>{c.slogan.before}<span className={styles.word}>{c.slogan.word}</span>{c.slogan.after}</p>
+          <div className={`${styles.head} ${styles.headApps}`}>
             <div>
               <p className={styles.eyebrow}>{a.eyebrow}</p>
               <h2>{a.title[0]}<br />{a.title[1]}</h2>

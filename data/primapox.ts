@@ -27,6 +27,20 @@ export const home = {
       { title: "Interiores e mobiliário", text: "Móveis metálicos, divisórias, luminárias e spots, aramados e armários de banheiro e cozinha.", image: "/gallery/40.webp", alt: "Divisória de vidro com estrutura metálica escura em ambiente interno, do acervo Primapox" },
     ],
   },
+  // "Competência central" block from the reference site, shown inside the "Alto Padrão de Qualidade" panel
+  competencia: {
+    eyebrow: "Competência técnica",
+    title: ["Não é só cor.", "É desempenho sobre o metal."],
+    text: "A tinta em pó forma uma película contínua sobre a peça. A aplicação eletrostática favorece a cobertura de geometrias complexas, enquanto a cura consolida resistência e acabamento.",
+    points: ["Cobertura uniforme em geometrias complexas", "Alta resistência química e mecânica", "Acabamentos brilhantes ou foscos", "Processo sem solventes orgânicos"],
+    polyester: {
+      tag: "Nossa especialidade",
+      title: "Trabalhamos só com poliéster.",
+      text: "A resina feita para o tempo: alta resistência aos raios U.V. e às intempéries, 100% de aderência e proteção anticorrosiva superior à da pintura líquida.",
+      link: "Ver as vantagens do poliéster",
+    },
+    slogan: { before: "COM PRIMAPOX O METAL NÃO DÁ NA ", word: "PINTA", after: "!" },
+  },
   // before/after slider, text from the reference site's "Visualização" section
   comparison: {
     eyebrow: "Visualização",
@@ -39,7 +53,9 @@ export const home = {
   servicesText: "Executamos pintura eletrostática com tinta em pó, ideais para: esquadrias, batentes, caixilhos, forros, divisórias, fachadas, telhas metálicas, coberturas, estruturas espaciais, etc.",
   advantagesTitle: "Principais Vantagens:",
   advantages: ["Alto Padrão de Qualidade", "Maior durabilidade", "Cores Diversificadas e vivas"],
-  aboutTitle: "A Primapox",
+  aboutTitle: "Quem Somos",
+  aboutHeadline: "Alto padrão de qualidade em pintura industrial.",
+  aboutCta: "Conheça nossa história",
   aboutText: "Atuando há mais de 20 anos no ramo de pintura industrial, a Primapox é uma empresa que vem se destacando no mercado, pelo alto padrão de qualidade de sua pintura e pelo atendimento personalizado ao cliente; fatores predominantes de seu desempenho e credibilidade.",
   contactTitle: "Fale Conosco",
   locationTitle: "Localização",
@@ -52,6 +68,8 @@ export const home = {
 // --- A Primapox (empresa.php) ---
 export const about = {
   title: "Quem Somos",
+  headline: "Alto padrão de qualidade em pintura industrial.",
+  cta: "Fale conosco",
   paragraphs: [
     "Atuando há mais de 20 anos no ramo de pintura industrial, a Primapox é uma empresa que vem se destacando no mercado, pelo alto padrão de qualidade de sua pintura e pelo atendimento personalizado ao cliente; fatores predominantes de seu desempenho e credibilidade.",
     "Seus projetos vão vibrar com nossas cores vivas  nas esquadrias, batentes, caixilhos, forros, divisórias, fachadas, telhas metálicas, coberturas, estruturas espaciais, etc.",

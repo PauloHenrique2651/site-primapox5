@@ -3,18 +3,25 @@ import Image from "next/image";
 import { about, contact, services } from "@/data/primapox";
 import { company } from "@/data/site";
 import { LegacyContactForm } from "@/components/LegacyContactForm";
+import { AboutProdec } from "./AboutProdec";
 import styles from "./LegacyContent.module.css";
 
 export function AboutContent() {
+  const [first, ...rest] = about.paragraphs;
+  const consulte = rest.find((x) => x.startsWith("CONSULTE"));
+  const others = rest.filter((x) => x !== consulte);
   return (
-    <section className={styles.section}>
-      <div className={`shell ${styles.split}`}>
-        <div>
-          {about.paragraphs.map((paragraph) => <p key={paragraph} className={paragraph.startsWith("CONSULTE") ? styles.strong : undefined}>{paragraph}</p>)}
+    <>
+      <AboutProdec id="quem-somos" eyebrow={about.title} title={about.headline} text={first} cta={{ label: about.cta, href: "/contato" }} />
+      <section className={styles.aboutMore}>
+        <div className={`shell ${styles.aboutCards}`}>
+          {others.map((paragraph, i) => (
+            <article key={paragraph}><b>{String(i + 1).padStart(2, "0")}</b><p>{paragraph}</p></article>
+          ))}
+          {consulte && <article data-cta=""><p>{consulte}</p></article>}
         </div>
-        <figure className={styles.photo}><Image src="/gallery/25.webp" alt="Fachada envidraçada com estrutura metálica" fill sizes="(max-width: 900px) 92vw, 38vw" /></figure>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
 

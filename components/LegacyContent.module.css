@@ -114,3 +114,13 @@
   .gallery { grid-template-columns: repeat(2, 1fr); }
   .rows dd { white-space: normal; }
 }
+
+/* Quem Somos: remaining paragraphs on the dark band */
+.aboutMore { padding: 0 0 clamp(3.5rem, 7vw, 6rem); color: #fff; background: #101010; }
+.aboutCards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.aboutCards article { padding: 1.8rem 1.6rem; background: #181818; border: 1px solid rgba(255, 255, 255, .1); border-radius: 8px; }
+.aboutCards b { display: block; margin-bottom: 1rem; color: #ff5a64; font: 600 .9rem/1 var(--font-inter); letter-spacing: .1em; }
+.aboutCards p { margin: 0; color: #e9e9e9; font-size: 1.02rem; line-height: 1.6; }
+.aboutCards article[data-cta] { display: flex; align-items: center; background: #ff5a64; border-color: #ff5a64; }
+.aboutCards article[data-cta] p { color: #101010; font-weight: 600; font-size: 1.1rem; }
+@media (max-width: 900px) { .aboutCards { grid-template-columns: 1fr; } }

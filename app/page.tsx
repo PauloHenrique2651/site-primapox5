@@ -3,6 +3,7 @@ import Link from "next/link";
 import { pageMetadata } from "@/data/seo";
 import { HeroBackgroundVideo } from "@/components/HeroBackgroundVideo";
 import { BeforeAfter } from "@/components/BeforeAfter";
+import { AboutProdec } from "@/components/AboutProdec";
 import { AdvantagePanels } from "@/components/AdvantagePanels";
 import { company } from "@/data/site";
 import { home, services, tabs } from "@/data/primapox";
@@ -31,15 +32,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className={styles.about} aria-labelledby="a-primapox">
-        <div className={`shell ${styles.aboutGrid}`}>
-          <div className={styles.aboutPhoto}><Image src="/gallery/12.webp" alt="Primapox" fill sizes="(max-width: 900px) 92vw, 45vw" /></div>
-          <div>
-            <h2 id="a-primapox">{home.aboutTitle}</h2>
-            <p className={styles.lead2}>{home.aboutText}</p>
-          </div>
-        </div>
-      </section>
+      <AboutProdec id="a-primapox" eyebrow={home.aboutTitle} title={home.aboutHeadline} text={home.aboutText} cta={{ label: home.aboutCta, href: "/empresa" }} />
 
       <section className={styles.compare} aria-labelledby="visualizacao">
         <div className="shell">

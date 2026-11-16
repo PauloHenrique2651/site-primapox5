@@ -6,7 +6,7 @@ export function PolyesterSection() {
   const p = services.polyester;
   const l = services.line;
   return (
-    <section className={styles.section}>
+    <section id="poliester" className={styles.section}>
       <div className="shell">
         <div className={styles.head}>
           <div>
