@@ -12,11 +12,11 @@ export function AboutContent() {
   const others = rest.filter((x) => x !== consulte);
   return (
     <>
-      <AboutProdec id="quem-somos" eyebrow={about.title} title={about.headline} text={first} cta={{ label: about.cta, href: "/contato" }} />
+      <AboutProdec id="quem-somos" title={about.headline} text={first} cta={{ label: about.cta, href: "/contato" }} />
       <section className={styles.aboutMore}>
         <div className={`shell ${styles.aboutCards}`}>
-          {others.map((paragraph, i) => (
-            <article key={paragraph}><b>{String(i + 1).padStart(2, "0")}</b><p>{paragraph}</p></article>
+          {others.map((paragraph) => (
+            <article key={paragraph}><p>{paragraph}</p></article>
           ))}
           {consulte && <article data-cta=""><p>{consulte}</p></article>}
         </div>

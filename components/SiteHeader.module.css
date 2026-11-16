@@ -1,5 +1,5 @@
 .header {
-  --logo-width: clamp(200px, 17vw, 250px);
+  --logo-width: clamp(240px, 21vw, 310px);
   position: fixed;
   inset: 0 0 auto;
   z-index: 100;
@@ -9,7 +9,7 @@
   transition: box-shadow 240ms ease;
 }
 
-.header[data-scrolled="true"] { --logo-width: clamp(160px, 12vw, 190px); box-shadow: 0 8px 26px rgba(0, 21, 102, .18); }
+.header[data-scrolled="true"] { --logo-width: clamp(190px, 15vw, 230px); box-shadow: 0 8px 26px rgba(0, 21, 102, .18); }
 
 .utility { color: #fff; background: var(--navy-deep); font-size: .92rem; }
 
@@ -115,8 +115,8 @@
 .mobile[hidden] { display: none; }
 
 @media (max-width: 1180px) {
-  .header { --logo-width: 170px; }
-  .header[data-scrolled="true"] { --logo-width: 146px; }
+  .header { --logo-width: 200px; }
+  .header[data-scrolled="true"] { --logo-width: 170px; }
   .nav { display: none; }
   .cta { justify-self: end; }
   .utilityInner span { display: none; }
@@ -161,7 +161,7 @@
 @media (max-width: 640px) {
   .cta { display: none; }
   .utilityInner { justify-content: space-between; gap: 1rem; font-size: .85rem; }
-  .header { --logo-width: 150px; }
+  .header { --logo-width: 180px; }
 }
 
 /* ---------- Olgacolor reverse engineering: dark slate sticky header (rgba(25,38,54,.95)) ---------- */

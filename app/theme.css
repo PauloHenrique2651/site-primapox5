@@ -23,7 +23,7 @@
   --body: var(--font-body), "Segoe UI", Arial, sans-serif;
   --mono: var(--font-body), "Segoe UI", Arial, sans-serif;
 
-  --header-h: 124px;
+  --header-h: 140px;
   --shell: min(90vw, 1360px);
 }
 
@@ -73,8 +73,8 @@ main { padding-top: var(--header-h); }
 .industrial-gallery__item { border-radius: 12px; }
 .gallery-filters button { border-radius: 6px; }
 
-@media (max-width: 1180px) { :root { --header-h: 96px; } }
-@media (max-width: 640px) { :root { --header-h: 86px; } }
+@media (max-width: 1180px) { :root { --header-h: 108px; } }
+@media (max-width: 640px) { :root { --header-h: 96px; } }
 
 /* Olgacolor reverse engineering: Inter, dark slate surfaces, pill buttons, centred section titles */
 .button { border-radius: 25px !important; }

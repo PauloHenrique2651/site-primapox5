@@ -21,7 +21,7 @@ export function AdvantagePanels() {
       <ul className={styles.row}>
         {home.advantages.map((item, i) => {
           const has = item in PANELS;
-          if (LINKS[item]) return <li key={item}><Link className={styles.pill} href={LINKS[item]}>{item}<b aria-hidden="true">→</b></Link></li>;
+          if (LINKS[item]) return <li key={item}><Link className={styles.pill} href={LINKS[item]}>{item}</Link></li>;
           return (
             <li key={item}>
               <button
@@ -43,7 +43,6 @@ export function AdvantagePanels() {
         <div className={styles.inner}>
           <div className={`${styles.head} ${styles.headApps}`}>
             <div>
-              <p className={styles.eyebrow}>{a.eyebrow}</p>
               <h2>{a.title[0]}<br />{a.title[1]}</h2>
             </div>
             <p className={styles.aside}>{a.text}</p>

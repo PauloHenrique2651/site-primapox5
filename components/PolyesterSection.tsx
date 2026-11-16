@@ -10,7 +10,6 @@ export function PolyesterSection() {
       <div className="shell">
         <div className={styles.head}>
           <div>
-            <p className={styles.eyebrow}>{p.eyebrow}</p>
             <h2>{p.title}</h2>
           </div>
           <p className={styles.intro}>{p.intro}</p>
