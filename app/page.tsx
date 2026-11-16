@@ -4,6 +4,7 @@ import { pageMetadata } from "@/data/seo";
 import { HeroBackgroundVideo } from "@/components/HeroBackgroundVideo";
 import { BeforeAfter } from "@/components/BeforeAfter";
 import { AboutProdec } from "@/components/AboutProdec";
+import { Competencia } from "@/components/Competencia";
 import { AdvantagePanels } from "@/components/AdvantagePanels";
 import { company } from "@/data/site";
 import { home, services, tabs } from "@/data/primapox";
@@ -31,6 +32,8 @@ export default function HomePage() {
           <AdvantagePanels />
         </div>
       </section>
+
+      <Competencia />
 
       <AboutProdec id="a-primapox" eyebrow={home.aboutTitle} title={home.aboutHeadline} text={home.aboutText} cta={{ label: home.aboutCta, href: "/empresa" }} />
 

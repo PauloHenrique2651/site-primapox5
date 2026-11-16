@@ -1,7 +1,7 @@
 .canvas {
   position: relative;
   width: 100%;
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 1024 / 559;
   max-height: 670px;
   overflow: hidden;
   background: #28353c;
@@ -62,7 +62,7 @@
   touch-action: pan-y;
 }
 @media (max-width: 600px) {
-  .canvas { aspect-ratio: 1 / 1; }
+  .canvas { aspect-ratio: 4 / 3; }
   .label { top: 12px; padding: 7px 9px; font-size: .6rem; }
   .beforeLabel { left: 12px; }
   .afterLabel { right: 12px; }
