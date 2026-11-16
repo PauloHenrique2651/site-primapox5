@@ -21,7 +21,6 @@ export default function HomePage() {
           <HeroBackgroundVideo src="/media/hero-olgacolor.webm" poster="/media/primapox-hero-poster.webp" className={styles.video} buttonClassName={styles.videoToggle} />
         </div>
         <div className={`shell ${styles.heroInner}`}>
-          <Image className={styles.heroLogo} src="/brand/primapox-logo.webp" alt="Primapox" width={1658} height={672} sizes="(max-width: 700px) 78vw, 480px" priority />
           <h1 id="nossos-servicos">{home.heroTitle[0]}<br /><em>{home.heroTitle[1]}</em></h1>
           <p className={styles.lead}>{home.heroText}</p>
         </div>
