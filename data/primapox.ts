@@ -56,7 +56,7 @@ export const home = {
   aboutTitle: "Quem Somos",
   aboutHeadline: "Alto padrão de qualidade em pintura industrial.",
   aboutCta: "Conheça nossa história",
-  aboutText: "Atuando há mais de 20 anos no ramo de pintura industrial, a Primapox é uma empresa que vem se destacando no mercado, pelo alto padrão de qualidade de sua pintura e pelo atendimento personalizado ao cliente; fatores predominantes de seu desempenho e credibilidade.",
+  aboutText: "Atuando há mais de 30 anos no ramo de pintura industrial, a Primapox é uma empresa que vem se destacando no mercado, pelo alto padrão de qualidade de sua pintura e pelo atendimento personalizado ao cliente; fatores predominantes de seu desempenho e credibilidade.",
   contactTitle: "Fale Conosco",
   locationTitle: "Localização",
   locationText: "Localizados na Praça Itapitanga nº 10, em Vigario Geral, contamos com a estrutura ideal pra atender você e seus clientes",
@@ -71,7 +71,7 @@ export const about = {
   headline: "Alto padrão de qualidade em pintura industrial.",
   cta: "Fale conosco",
   paragraphs: [
-    "Atuando há mais de 20 anos no ramo de pintura industrial, a Primapox é uma empresa que vem se destacando no mercado, pelo alto padrão de qualidade de sua pintura e pelo atendimento personalizado ao cliente; fatores predominantes de seu desempenho e credibilidade.",
+    "Atuando há mais de 30 anos no ramo de pintura industrial, a Primapox é uma empresa que vem se destacando no mercado, pelo alto padrão de qualidade de sua pintura e pelo atendimento personalizado ao cliente; fatores predominantes de seu desempenho e credibilidade.",
     "Seus projetos vão vibrar com nossas cores vivas  nas esquadrias, batentes, caixilhos, forros, divisórias, fachadas, telhas metálicas, coberturas, estruturas espaciais, etc.",
     "Além disso, vão durar muito mais tempo, pois a proteção anti-corrosiva é superior ao da anodização e da pintura líquida, como também à resistência química e física.",
     "Estamos capacitados para executar pintura em peças com até 8 metros de comprimento.",
